@@ -21,3 +21,17 @@ where fromuser = 12489 or touser = 12489;
 select G.fname as User_Name,M.mobilenumber1,M.mobilenumber2,M.mobilenumber3
 from mobilenumbers M, generaluser G
 group by G.userid;
+
+-- query to select mobilenumber from username
+select *
+from mobilenumbers 
+where userID IN 
+(select userID 
+ from generaluser 
+ where fname = 'Satyam'
+);
+
+-- query to group users by their gender
+select * 
+from generaluser
+where gender = 'female';
