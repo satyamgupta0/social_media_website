@@ -102,4 +102,8 @@ sessionid varchar(300) not null,
  foreign key (touser) references generalUser(userID)
  );
  
- 
+ create table reaction(
+      postid varchar(300) not null,
+      likes int,
+      foreign key (postid) references posts(postid)
+ )

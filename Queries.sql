@@ -36,33 +36,20 @@ select G.fname as User_Name,M.mobilenumber1,M.mobilenumber2,M.mobilenumber3
 from mobilenumbers M, generaluser G
 group by G.userid;
 
--- query to select mobilenumber from username
-select *
-from mobilenumbers 
-where userID IN 
-(select userID 
- from generaluser 
- where fname = 'Satyam'
-);
-
 -- query to group users by their gender
 select * 
 from generaluser
 where gender = 'female';
 
-select sessionid from friendships where userID = 1 and friendId = 5;
+-- qeury 
+select G.fname,C.message
+from generaluser G,chat C
+where C.sessionid = 18 and C.fromuser = G.userID;
+
+select sessionid from friendships where userID = 12489 and friendId = 12397;
 insert into chat values('S4','C11','Hiii',1,5,'2020-12-30 13:08:54.193');
 delete from chat where chatId = 'C11';
 insert into posts values(1,'P1','Link1','Cool','2022-04-11 13:08:54.193');
 insert into posts values(3,'P3','Link3','Cool','2022-04-11 13:08:54.193');
 insert into reaction values('P1',10,'Super');
 insert into reaction values('P2',11,'Nice');
-
-update reaction set likes = 15 where postId in('P1','P2');
-
-alter table reaction drop column Reaction_comment;
-drop table reaction;
-
-insert into reaction values('P1',10);
-insert into reaction values('P2',15);
-insert into reaction values('P3',53);
