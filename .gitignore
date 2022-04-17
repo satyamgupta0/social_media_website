@@ -2,3 +2,5 @@ src/Images/
 *.jpeg
 *.png
 *.jpg
+package.json
+.gitignore
