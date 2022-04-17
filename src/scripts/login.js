@@ -3,6 +3,7 @@ define (function(require)
     var mysql = require('mysql2');
 });
 
+//validate username and password
 function create_account()
 {
     var username=document.getElementById("username").value;  
@@ -17,7 +18,7 @@ function create_account()
             host: "localhost",
             port: '3306',
             user: "root",
-            password: "Abhay@mySQL#1234",
+            password: "password",
             database: "social"
           });
           
