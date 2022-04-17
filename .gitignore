@@ -1,6 +1,8 @@
-src/Images/
+./src/Images/
 *.jpeg
 *.png
 *.jpg
 package.json
+package-lock.json
 .gitignore
+node_modules/
