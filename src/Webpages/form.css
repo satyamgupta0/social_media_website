@@ -4,7 +4,7 @@
     font-family:'Times New Roman', Times, serif;
     background-image: url(Images/back1.jpg);
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size:auto; 
     background-position: center;
 }
 
@@ -28,7 +28,7 @@ body, html{
 
 .container{
     width: 400px;
-    height: 420px;
+    height: 450px;
     background: rgb(33, 33, 58);
     color: black;
     position: absolute;
