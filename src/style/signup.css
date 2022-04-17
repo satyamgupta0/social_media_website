@@ -4,7 +4,7 @@
 }
 
 body,html{
-    background-image: url(Images/back1.jpg);
+    background-image: url(/src/Images/back1.jpg);
 }
 
 .container{
