@@ -1,8 +1,10 @@
-document.getElementById("Login_Button").onclick = create_account();
-
-define (function create_account(require)
+define (function(require)
 {  
     var mysql = require('mysql2');
+});
+
+function create_account()
+{
     var username=document.getElementById("username").value;  
     var password=document.getElementById("password").value;      
     //other validations required code  
@@ -32,4 +34,4 @@ define (function create_account(require)
             });
           });
     }  
-}  )
+} 

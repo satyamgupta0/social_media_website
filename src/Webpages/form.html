@@ -11,67 +11,18 @@
     <script src="require.js"></script>
 </head>
 <body>
-    <!-- <div class="space">
-        <br/>
-    </div>
-    <div class="heading">
-        <h1 class="heading">     Welcome In Database Management Project.</h1>
-        <h2 class="heading">     Social Networking Site</h2>
-    </div> -->
-    <div class="container">
+    <form class="container">
             <br/>
             <h1 class="name">Instagram</h1><br>
             <img class="logo" src="Images/Logo.jpeg"><br/><br>
-             <input class="UserName" type="text" placeholder="UserName" text="black" name="user" id="username"><br/><br/>
-             <input class="password" type="password" placeholder="Password" name="pswd" id="password"><br/><br/>
-             <div id="check" ><input type="checkbox" name="check" value="agree"/> I Agree with terms and condition.</div><br/>
-             <button class="login" onclick="create_account" id="Login_Button">Login</button><br/><br/>
-             <!-- <button class="signup">Signup</button><br/><br/> -->
-             <!-- <a href="https://www.facebook.com"><ion-icon name = "logo-facebook"></ion-icon></a>
-             <a href="#"><ion-icon name = "logo-google"></ion-icon></a>
-             <a href="#"><ion-icon name = "logo-twitter"></ion-icon></a> -->
+             <input class="UserName" type="text" placeholder="UserName" text="black" name="user" required><br/><br/>
+             <input class="password" type="password" placeholder="Password" name="pswd" required><br/><br/>
+             <div id="check" ><input type="checkbox" name="check" value="agree" required/> I Agree with terms and condition.</div><br/>
+             <button class="login">Login</button><br/><br/>
              <a href="" id="forgetpassword">Forget Password ?</a><br>
              <span id="account">Don't Have an Account </span><a href="signup.html" id="signup">Sign Up</a>
              
-    </div>
-    <p id="demo"></p>
-    
-    <script>
-        require(['mysql2'], function (mysql2) {
-         var mysql = require(mysql2);
-        }); 
-          
-        function create_account(){
-            var username=document.getElementById("username").value;  
-            var password=document.getElementById("password").value;      
-            //other validations required code  
-            if(username==''||password==''){  
-            alert("Enter each details correctly");  
-            }    
-            else
-            { 
-                var con = mysql.createConnection({
-                    host: "localhost",
-                    port: '3306',
-                    user: "root",
-                    password: "Abhay@mySQL#1234",
-                    database: "social"
-                });
-                
-                con.connect(function(err) {
-                    if (err) throw err;
-                    let query = "SELECT fname,pswd FROM generaluser WHERE fname = '"+username+"' and pswd = '"+password+"'";
-                    con.query(query, function (err, result, fields) {
-                    if (err) throw err;
-                    if (result != null)
-                    document.getElementById("demo").innerHTML = "done";
-                    else
-                    document.getElementById("demo").innerHTML = "not done";
-                    process.exit(0)
-                    });
-                });
-            }  
-        }
-    </script>
+    </form>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
