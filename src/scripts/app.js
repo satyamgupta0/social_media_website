@@ -1,17 +1,20 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const path = require("path");
  
 app.get("/", (req, res)=>{ 
-    res.sendFile("F:\DBMS Project\src\html\login.html")
+    let indexPath = path.join(__dirname,"../html/login.html")
+    res.sendFile(indexPath)
 });
 
 app.get("/signup", (req, res)=>{
-    res.sendFile(".\src\html\signup.html")
+    indexPath = path.join(__dirname,"../html/signup.html")
+    res.sendFile(indexPath)
 });
 
-app.post("/home", (req, res)=>{
-    res.send("Home Page");
+app.get("/home", (req, res)=>{
+    res.send("Home Page")
 });
 
 app.listen(port, ()=>{
