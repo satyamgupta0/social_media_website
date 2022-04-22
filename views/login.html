@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-    <link rel="stylesheet" href="style/login.css"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <!-- <script src = "Form.js"></script>
     <script src="require.js"></script> -->
-</head>
-<body>
-    <form class="container">
-            <br/>
-            <h1 class="name">Instagram</h1><br>
-            <img class="logo" src="images/Logo.jpeg"><br/><br>
-             <input class="UserName" type="text" placeholder="UserName" text="black" name="user" required><br/><br/>
-             <input class="password" type="password" placeholder="Password" name="pswd" required><br/><br/>
-             <div id="check" ><input type="checkbox" name="check" value="agree" required/> I Agree with terms and condition.</div><br/>
-             <button class="login">Login</button><br/><br/>
-             <a href="" id="forgetpassword">Forget Password ?</a><br>
-             <span id="account">Don't Have an Account </span><a href="/signup" id="signup">Sign Up</a>
-             
+  </head>
+  <body>
+    <form class="container" action="/login" method="post">
+      <br />
+      <h1 class="name">Instagram</h1>
+      <br />
+      <img class="logo" src="images/Logo.jpeg" /><br /><br />
+      <input
+        class="UserName"
+        type="text"
+        placeholder="UserName"
+        text="black"
+        name="user"
+        required
+      /><br /><br />
+      <input
+        class="password"
+        type="password"
+        placeholder="Password"
+        name="pswd"
+        required
+      /><br /><br />
+      <div id="check">
+        <input type="checkbox" name="check" value="agree" required /> I Agree
+        with terms and condition.
+      </div>
+      <br />
+      <button type="submit" class="login">Login</button><br /><br />
+      <a href="" id="forgetpassword">Forget Password ?</a><br />
+      <span id="account">Don't Have an Account </span
+      ><a href="/signup" id="signup">Sign Up</a>
     </form>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-</body>
+  </body>
 </html>

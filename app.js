@@ -13,7 +13,7 @@ app.use(express.static("public"));
 // /home/satyam/social/social_media_website/pubilc
  
 app.use(require('./scripts/signup'));
-
+app.use(require('./scripts/login'));
 app.get("/", (req, res)=>{ 
     let indexPath = path.join(__dirname,"views/login.html")
     res.sendFile(indexPath)
