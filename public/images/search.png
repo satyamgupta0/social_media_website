@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./Profile.css">
+</head>
+<body>
+    <!-- -------------------------header------------------------- -->
+    <nav>
+        <div class="container">
+            <div class="left_navabar">
+                <img src="./Images/logo.jpg" class="images">
+                <h3 id="name2">Friends.com</h3>
+            </div> 
+             <div class="search_bar">
+                  <i class="uil uil-search"></i>
+                  <input type="search" placeholder="Search For a Friend">
+             </div>
+             <div class="right_navbar">
+                 <li><a href="#" class="btn active"><i class="uil uil-home" ></i></a></li>
+                 <li><a href="#" class="btn"><i class="uil uil-plus" > </i></a></li>
+                 <li><a href="#" class="btn"><i class="uil uil-chat" ></i></a></li>
+                 <li><a href="#" class="btn"><img src="./Images/Profile Logo.jfif" alt="" class="images" id="profile"></a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- --------------------------------main---------------------- -->
+    <main>
+         <div class="container">
+             <div class="left">
+                    <div class="container1">
+                        <img src="/Images/post3.jfif" style="height: 300px; width: 600px;">
+                        <img src="./Images/man.png" style="height: 160px; margin-left: 218px; margin-top: -130px;">
+                        <div style="margin-left: auto; margin-right: auto; width: 5em; font-size: 30px;">
+                            <span>User Name</span>
+                        </div>
+                        <div style=" margin-left: 200px; margin-right: auto; width: 15em; font-size: large; padding: 4px;">
+                            <span>Mayank Mangal Mourya</span>
+                        </div>
+                        <div style="margin-left: auto; margin-right: auto;; font-size: 25px; display: flex; grid-template-columns: auto 120px; column-gap: 10rem; margin-left: 100px; padding: 10px;">
+                             <div>
+                                 Friend : 20
+                             </div>
+                             <div>
+                                 Post : 30
+                             </div>
+                        </div>
+                        <div style="background-color:cadetblue ; height: 220px; width: 570px; margin-left: 15px; border-radius: 30px;  display: flex; flex-wrap: wrap; overflow-y: auto; padding: 5px; ">
+
+                            <div class="gallery">
+                                <img src="/Images/post1.jfif" alt="">
+                            </div>
+                            <div class="gallery">
+                                <img src="/Images/post2.jfif" alt="">
+                            </div>
+                            <div class="gallery">
+                                <img src="/Images/post3.jfif" alt="">
+                            </div>
+                            <div class="gallery">
+                                <img src="/Images/post1.jfif" alt="">
+                            </div>
+                            <div class="gallery">
+                                <img src="/Images/post1.jfif" alt="">
+                            </div>
+                            <div class="gallery">
+                                <img src="/Images/post1.jfif" alt="">
+                            </div>
+                            <div class="gallery">
+                                <img src="/Images/post1.jfif" alt="">
+                            </div>
+                            <div class="gallery">
+                                <img src="/Images/post1.jfif" alt="">
+                            </div>
+                            <div class="gallery">
+                                <img src="/Images/post1.jfif" alt="">
+                            </div>
+                        </div>
+                    </div>
+             </div>
+
+
+             <div class="right">
+                 <!-- ---------------posts------------------------- -->
+                <div class="posts">
+                    <!-- -----------------------post1--------------------------- -->
+                    <div class="post">
+                        <div class="head">
+                             <div class="profile_photo">
+                                 <img src="./Images/Profile Logo.jfif" alt="" class="images">
+                             </div>
+                             <div class="name">
+                                 <h3>Tejas Gundale</h3>
+                                 <small>10 Min ago</small>
+                             </div>
+                        </div>
+
+                        <div class="photo">
+                             <img src="./Images/post1.jfif" alt="" class="post_photo">
+                        </div>
+
+                        <div class="action-button">
+                             <div class="like_comment">
+                                  <span><i class="uil uil-heart"></i></span>
+                                  <span><i class="uil uil-comment-dots"></i></span>
+                                  <span><i class="uil uil-share-alt"></i></span>
+                             </div>
+                             <div class="save">
+                                   <span><i class="uil uil-bookmark-full"></i></span>
+                             </div>
+                        </div>
+                             
+                        <div class="liked-by">
+                                 <span><img src="./Images/profile2.jfif" alt="" class="image"></span>
+                                 <span><img src="./Images/profile3.jfif" alt="" class="image"></span>
+                                 <span><img src="./Images/profile4.jfif" alt="" class="image"></span>
+                                 <p>Liked by <b>Name1</b> and <b>123 others</b></p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Tejas Gundale</b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div> 
+
+                        <div class="comments text-muted">
+                                   view all 23 comments
+                        </div>
+                    </div> 
+
+                    <!-- ---------------------------post2----------------------------- -->
+                    <div class="post">
+                        <div class="head">
+                             <div class="profile_photo">
+                                 <img src="./Images/profile2.jfif" alt="" class="images">
+                             </div>
+                             <div class="name">
+                                 <h3>Name 1</h3>
+                                 <small>25 Min ago</small>
+                             </div>
+                        </div>
+
+                        <div class="photo">
+                             <img src="./Images/post2.jfif" alt="" class="post_photo">
+                        </div>
+
+                        <div class="action-button">
+                             <div class="like_comment">
+                                  <span><i class="uil uil-heart"></i></span>
+                                  <span><i class="uil uil-comment-dots"></i></span>
+                                  <span><i class="uil uil-share-alt"></i></span>
+                             </div>
+                             <div class="save">
+                                   <span><i class="uil uil-bookmark-full"></i></span>
+                             </div>
+                        </div>
+                             
+                        <div class="liked-by">
+                                 <span><img src="./Images/profile2.jfif" alt="" class="image"></span>
+                                 <span><img src="./Images/profile3.jfif" alt="" class="image"></span>
+                                 <span><img src="./Images/profile4.jfif" alt="" class="image"></span>
+                                 <p>Liked by <b>Name1</b> and <b>123 others</b></p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Name1</b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div> 
+
+                        <div class="comments text-muted">
+                                   view all 23 comments
+                        </div>
+                    </div> 
+
+                    <!-- -------------------------------------------post3------------------------------- -->
+                    <div class="post">
+                        <div class="head">
+                             <div class="profile_photo">
+                                 <img src="./Images/profile3.jfif" alt="" class="images">
+                             </div>
+                             <div class="name">
+                                 <h3>Name 2</h3>
+                                 <small>45 Min ago</small>
+                             </div>
+                        </div>
+
+                        <div class="photo">
+                             <img src="./Images/post3.jfif" alt="" class="post_photo"> 
+                        </div>
+
+                        <div class="action-button">
+                             <div class="like_comment">
+                                  <span><i class="uil uil-heart"></i></span>
+                                  <span><i class="uil uil-comment-dots"></i></span>
+                                  <span><i class="uil uil-share-alt"></i></span>
+                             </div>
+                             <div class="save">
+                                   <span><i class="uil uil-bookmark-full"></i></span>
+                             </div>
+                        </div>
+                             
+                        <div class="liked-by">
+                                 <span><img src="./Images/profile2.jfif" alt="" class="image"></span>
+                                 <span><img src="./Images/profile3.jfif" alt="" class="image"></span>
+                                 <span><img src="./Images/profile4.jfif" alt="" class="image"></span>
+                                 <p>Liked by <b>Name1</b> and <b>123 others</b></p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Name2</b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div> 
+
+                        <div class="comments text-muted">
+                                   view all 23 comments
+                        </div>
+                    </div> 
+<!-- --------------------------------------------------------------post4--------------------------- -->
+                    <div class="post">
+                        <div class="head">
+                             <div class="profile_photo">
+                                 <img src="./Images/profile4.jfif" alt="" class="images">
+                             </div>
+                             <div class="name">
+                                 <h3>Name 3</h3>
+                                 <small>55 Min ago</small>
+                             </div>
+                        </div>
+
+                        <div class="photo">
+                             <img src="./Images/post4.jfif" alt="" class="post_photo">
+                        </div>
+
+                        <div class="action-button">
+                             <div class="like_comment">
+                                  <span><i class="uil uil-heart"></i></span>
+                                  <span><i class="uil uil-comment-dots"></i></span>
+                                  <span><i class="uil uil-share-alt"></i></span>
+                             </div>
+                             <div class="save">
+                                   <span><i class="uil uil-bookmark-full"></i></span>
+                             </div>
+                        </div>
+                             
+                        <div class="liked-by">
+                                 <span><img src="./Images/profile2.jfif" alt="" class="image"></span>
+                                 <span><img src="./Images/profile3.jfif" alt="" class="image"></span>
+                                 <span><img src="./Images/profile4.jfif" alt="" class="image"></span>
+                                 <p>Liked by <b>Name1</b> and <b>123 others</b></p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Name 3</b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div> 
+
+                        <div class="comments text-muted">
+                                   view all 23 comments
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>    
+    </main>
+</body>
+</html>

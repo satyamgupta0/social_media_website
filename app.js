@@ -25,8 +25,19 @@ app.get("/signup", (req, res)=>{
 });
 
 app.get("/home", (req, res)=>{
-    res.send("Home Page")
+    indexPath = path.join(__dirname,"views/home.html")
+    res.sendFile(indexPath)
 });
+app.get("/upload", (req, res)=>{
+    indexPath = path.join(__dirname,"views/upload.html")
+    res.sendFile(indexPath)
+});
+
+app.get("/profile", (req, res)=>{
+    indexPath = path.join(__dirname,"views/profile.html")
+    res.sendFile(indexPath)
+});
+
 app.listen(port, ()=>{
     console.log(`The application started successfully on port ${port}`);
 });

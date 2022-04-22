@@ -1,0 +1,277 @@
+.images{
+    height: 40px;
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body{
+    color: black;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav{
+    width: 100%;  
+    background-color:  #5256ad;
+    padding: none;
+    position: fixed;
+    height: 51px;
+    z-index: 10;
+    border-bottom: 2px solid black;
+
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    
+}
+
+#name2{
+    font-size: 30px;
+   margin-top: -50px;
+   margin-left: 45px;
+   align-items: center;
+   font-family: 'Ms Madi', cursive;
+}
+
+
+nav .search_bar{
+    background: rgb(216, 202, 202);
+    border-radius:10px ;
+    width: 450px;
+    margin-left: 250px;
+    align-items: center;
+    margin-top: 7px;
+}
+
+nav .search_bar input[type="search"]{
+    background: transparent;
+    width: 400px;
+    height: 35px;
+    margin-left:5px;
+    font-size: 18px;
+    border: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+nav .container .right_navbar{
+    display: flex;
+    position: absolute;
+    left: 80%;
+    height: 51px;
+    width: 250px;   
+}
+
+
+nav .container .right_navbar li{
+    list-style: none;
+    flex: 1;
+    font-size: 40px;
+    cursor: pointer;
+    align-items: center;
+}
+
+nav .container .right_navbar li a{
+    color: black;
+    transition: all 0.2s ease;
+    display: inline-block;
+    padding: 4px;
+    cursor: pointer;
+    
+
+}
+
+
+nav .container .right_navbar li .active{
+    color: rgb(195, 120, 8);
+    border-bottom: 5px solid  rgb(195, 120, 8);
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.5 ease;
+}
+
+nav .container .right_navbar li :hover{
+    color:  rgb(195, 120, 8);
+    opacity: 1;
+
+}
+
+
+
+main{
+    position: relative;
+    top: 51px;  
+    background-color: rgb(197, 215, 227);
+}
+
+main .container{
+    display: grid;
+    grid-template-columns: 850px auto;
+    column-gap: 2rem;
+}
+
+
+.left .posts .post{
+    margin-left: 195px;
+    margin-top: 10px;
+    background-color: rgb(228, 238, 238);
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.left .post .head{
+    display: flex;
+   
+}
+
+.left .post .name{
+    margin-left: 0.5rem;
+}
+
+.left .post .photo{
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0.7rem 0;
+}
+
+.post_photo{
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #ccc;
+}
+
+.left .post .action-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem ;
+    
+}
+
+.left .liked-by{
+    display: flex;
+}
+
+.left .liked-by .image{
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid white;
+    margin-left: -0.6rem;
+}
+
+.left .liked-by p{
+    margin-left: .5rem;
+}
+
+
+
+.right .container1{
+    
+    top: 61px;
+    height: 45vh;
+    position: fixed;
+    overflow: scroll;
+    width: 450px;
+    background-color: rgb(222, 237, 232);
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+.right .container2{
+    
+    top: 63px;
+    height: 44vh;
+    position: fixed;
+    overflow: scroll;
+    margin-top: 46vh;
+    width: 450px;
+    background-color: rgb(222, 237, 232);
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+.right .container1 .header{
+    border-bottom: 2px solid black;
+}
+
+.right .container1 .head{
+    display: flex;
+    padding: 5px;
+   
+}
+
+.right .container1 .name{
+    margin-left: 0.5rem;
+}
+
+.right .container1 .button{
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(89, 200, 243);
+    height: 28px;
+    position: relative;
+    margin-left: 170px;
+}
+.right .container2 .header{
+    border-bottom: 2px solid black;
+}
+
+.right .container2 .head{
+    display: flex;
+    padding: 5px;
+   
+}
+
+.right .container2 .name{
+    margin-left: 0.5rem;
+}
+
+.right .container2 .button{
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(89, 200, 243);
+    height: 28px;
+    position: relative;
+    margin-left: 120px;
+}
+
+.right .container2 .button1{
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(89, 200, 243);
+    height: 28px;
+    position: relative;
+    margin-left: 10px;
+}
+
+
