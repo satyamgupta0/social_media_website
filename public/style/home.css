@@ -157,8 +157,8 @@ main .container{
 }
 
 .post_photo{
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 600px;
     border-radius: 10px;
     box-shadow: 10px 10px 5px #ccc;
 }
@@ -261,7 +261,7 @@ main .container{
     background-color: rgb(89, 200, 243);
     height: 28px;
     position: relative;
-    margin-left: 120px;
+    margin-left: 150px;
 }
 
 .right .container2 .button1{
