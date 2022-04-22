@@ -16,4 +16,5 @@ var mysqlConnection=mysql.createConnection({
           console.log("Connection Failed");
       }
   });
+  module.exports=mysqlConnection;
   

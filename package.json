@@ -1,0 +1,24 @@
+{
+  "name": "social_media_website",
+  "version": "1.0.0",
+  "description": "For the related Documents please visit. https://drive.google.com/drive/folders/15WddxvqnxwIPcStU4T3gz-wqfxrR5o2e?usp=sharing",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyamgupta0/social_media_website.git"
+  },
+  "author": "Satyam Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyamgupta0/social_media_website/issues"
+  },
+  "homepage": "https://github.com/satyamgupta0/social_media_website#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3"
+  }
+}
