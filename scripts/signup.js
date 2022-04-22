@@ -1,16 +1,20 @@
 const con = require("./dbcon");
+const express = require('express');
+const router=express.Router();
 
-let username = document.getElementsByName("username");
-let fname = document.getElementByName("fname");
-let lname = document.getElementByName("username");
-let mob1 = document.getElementByName("mobile1");
-let mob2 = document.getElementByName("mobile2");
-let email = document.getElementByName("email");
-let pswd = document.getElementByName("pswd");
-let dob = document.getElementByName("dob");
-let gender = document.getElementByName("gender");
-var date = new Date();
-let age = date.getFullYear() - dob.getFullYear();
+
+router.post("/reg",(req,res)=>{
+  let username = req.body.username;
+let fname = req.body.fname;
+let lname = req.body.username;
+let mob1 = req.body.mobile1;
+let mob2 = req.body.mobile2;
+let email = req.body.email;
+let pswd = req.body.pswd;
+// let dob = req.body.dob;
+let gender = req.body.gender;
+// var date = new Date();
+// let age = date.getFullYear() - dob.getFullYear();
 
 let person = {
   username: username,
@@ -20,27 +24,20 @@ let person = {
   mob2: mob2,
   email: email,
   password: pswd,
-  dob: dob,
-  age: age,
+  // dob: dob,
+  // age: age,
   gender: gender,
 };
 console.log(person);
+res.send(person);
+})
 
-// var sql = require("mysql2");
-// var con = sql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   password: "password",
-//   database: "social",
-// });
+module.exports=router;
 
-// con.connect(function (err) {
+// var sql =
+//   'insert into generalUser(userID, fname, lname, gender, email, pswd,dateofbirth) values("stymguupta4","Satyam","Gupta", "male","2021052170@iiitv.ac.in", "wont tell","2017-06-15")';
+// con.query(sql, function (err, result) {
 //   if (err) throw err;
-//   console.log("Connected!");
-var sql =
-  'insert into generalUser(userID, fname, lname, gender, email, pswd,dateofbirth) values("stymguupta4","Satyam","Gupta", "male","202052170@iiitv.ac.in", "wont tell","2017-06-15")';
-con.query(sql, function (err, result) {
-  if (err) throw err;
-  console.log("1 record inserted");
-});
+//   console.log("1 record inserted");
 // });
+
