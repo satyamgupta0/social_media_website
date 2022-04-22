@@ -37,6 +37,11 @@ app.get("/profile", (req, res)=>{
     indexPath = path.join(__dirname,"views/profile.html")
     res.sendFile(indexPath)
 });
+app.get("/welcome", (req, res)=>{
+    indexPath = path.join(__dirname,"views/welcome.html")
+    res.sendFile(indexPath)
+});
+
 
 app.listen(port, ()=>{
     console.log(`The application started successfully on port ${port}`);

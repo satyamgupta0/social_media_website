@@ -5,20 +5,15 @@ const router = express.Router();
 router.post("/login", (req, res) => {
   let user = req.body.user;  
   let pswd =req.body.pswd;
-  let query =
-    "SELECT * FROM generalUser WHERE email = '" +
-    user +
-    "' and pswd = '" +
-    pswd +
-    "'";
+  console.log(user,pswd)
+  let query ="SELECT * FROM generalUser WHERE email = '" +user +"'AND pswd = '" +pswd +"'";
     let res11='';
     
   con.query(query, function (err, result, fields) {
     if (err) throw err;
     if (result != null) res11="Logged in successfully.";
     else res11="Username or Password are not correct.";
-    res.send(res11);
-    process.exit(0);
+    res.send(res11);    
   });
 });
 
