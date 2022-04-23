@@ -5,6 +5,7 @@ const path = require("path");
 const bodyParser= require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set("view engine", "ejs");//for ejs rendering
 
 app.use(express.static("public"));
 // app.use(express.static(__dirname+'public/style'));
