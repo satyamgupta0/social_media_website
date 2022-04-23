@@ -30,12 +30,20 @@ router.post("/reg", (req, res) => {
     gender: gender,
   };
   console.log(person);
-  console.log(dob.toISOString().split('T')[0]);
 
-  var sql =
+  var sql1 =
     'insert into generalUser(userID, fname, lname, gender, email, pswd,dateofbirth,age)'+
-    ' values("'+username+'","'+fname+'","'+lname+'", "'+gender+'","'+email+'", "'+pswd+'","'+dob.toISOString().split('T')[0]+' "'+age+'")';
-  con.query(sql, (err, result) => {
+    ' values("'+username+'","'+fname+'","'+lname+'", "'+gender+'","'+email+'", "'+pswd+'","'+dob.toISOString().split('T')[0]+'", '+age+')';
+
+  var sql2 =
+    'insert into mobilenumbers(userID, mobilenumber1 ,mobilenumber2)'+
+    ' values("'+username+'","'+mob1+'","'+mob2+'")';
+
+  con.query(sql2, (err, temp) => {
+    if (err) throw err;
+  });
+
+  con.query(sql1, (err, result) => {
     if (err) throw err;
     else {      
       res.redirect('/welcome');      
