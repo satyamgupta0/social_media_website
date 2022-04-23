@@ -26,23 +26,22 @@ mobilenumber1 varchar(15),
 mobilenumber2 varchar(15),
 mobilenumber3 varchar(15),
 primary key (userID)
+
 );
  
- create table friendships( -- Describes a relationship bw user and friend 
+create table friendships( -- Describes a relationship bw user and friend 
  -- MySQL limits us to create personalized friendship tables
  -- We have to make a common friendship table describing the chatsession
  -- relationship and status
  userID varchar(300) ,
  friendId varchar(300),
  frndstatus varchar(50),-- blocked, active
- sessionid varchar(300) not null,-- reference to chat session
+ #sessionid varchar(300) not null,-- reference to chat session
  primary key (userID,friendID),
  #foreign key (sessionid) references chat(sessionid), #Session ID will be same for multiple chatsin a sesion
- foreign key (friendID) references generalUser(userID),
- foreign key (userID) references generalUser(userID)
+ foreign key (friendID) references generalUser(userID) ON DELETE CASCADE ,
+ foreign key (userID) references generalUser(userID) ON DELETE CASCADE 
  ); 
- 
-
  create table posts(
  -- user either share posts, or save posts
  -- The problem is to increase abstraction and
@@ -64,7 +63,7 @@ primary key (userID)
  # commentuserID int not null,
 tmstp datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
 primary key (postid),
-foreign key (uploaderID) references generalUser(userID)
+foreign key (uploaderID) references generalUser(userID) ON DELETE CASCADE 
 );
  
   create table upload(
@@ -72,18 +71,17 @@ foreign key (uploaderID) references generalUser(userID)
  -- Describes the relationship bw user and post
  -- we could be merged it with posts table but it 
  -- could have decreased speed.
- 
+ -- a user can save the post to his profile that relation is also stored here
  userID varchar(300) not null,
  postID varchar(300) not null,
  flag varchar(50),# flag to identify whether the post is posted by the user or saved, or shared
  primary key (userID,postID),
- foreign key (userID) references generalUser(userID),
- foreign key (postID) references posts(postid)
+ foreign key (userID) references generalUser(userID) ON DELETE CASCADE ,
+ foreign key (postID) references posts(postid) ON DELETE CASCADE 
  );
- 
  ################### problematic ###########################
  -- Chat-session bw two users
-create table chat(
+  create table chat(
 -- for describing the chatsession either we can create a common table
 -- for each and every pairs; but problem related to it is it decreases 
 -- the speed, security, integrity and privacy of chats
@@ -98,9 +96,10 @@ sessionid varchar(300) not null,
  toUser varchar(300),
  tmstp datetime NOT NULL DEFAULT CURRENT_TIMESTAMP, 
  primary key (chatID),
- foreign key (fromuser) references generalUser(userID),
- foreign key (touser) references generalUser(userID)
+ foreign key (fromuser) references generalUser(userID) ON DELETE CASCADE, 
+ foreign key (touser) references generalUser(userID) ON DELETE CASCADE 
  );
+ 
  
  create table reaction(
       postid varchar(300) not null,
