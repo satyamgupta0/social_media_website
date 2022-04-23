@@ -18,8 +18,7 @@ router.post("/login", (req, res) => {
     if (err) throw err;
     if (result != null) res11="Logged in successfully.";
     else res11="Username or Password are not correct.";
-    res.send(res11);
-    process.exit(0);
+    res.send(res11);    
   });
 });
 

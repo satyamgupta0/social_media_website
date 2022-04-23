@@ -160,7 +160,8 @@ main .container{
 }
 
 .right .post .name{
-    margin-right: 0.5rem;
+    position: relative;
+    margin-left: 0.5em;
 }
 
 .right .post .photo{
