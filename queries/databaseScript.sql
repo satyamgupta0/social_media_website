@@ -36,7 +36,7 @@ create table friendships( -- Describes a relationship bw user and friend
  userID varchar(300) ,
  friendId varchar(300),
  frndstatus varchar(50),-- blocked, active
- sessionid varchar(300) not null,-- reference to chat session
+ #sessionid varchar(300) not null,-- reference to chat session
  primary key (userID,friendID),
  #foreign key (sessionid) references chat(sessionid), #Session ID will be same for multiple chatsin a sesion
  foreign key (friendID) references generalUser(userID) ON DELETE CASCADE ,
@@ -71,7 +71,7 @@ foreign key (uploaderID) references generalUser(userID) ON DELETE CASCADE
  -- Describes the relationship bw user and post
  -- we could be merged it with posts table but it 
  -- could have decreased speed.
- 
+ -- a user can save the post to his profile that relation is also stored here
  userID varchar(300) not null,
  postID varchar(300) not null,
  flag varchar(50),# flag to identify whether the post is posted by the user or saved, or shared
