@@ -10,8 +10,16 @@ router.post("/login", (req, res) => {
     let res11='';
     
     let person = {
-      user: user,
-      pswd: pswd,
+      username: username,
+      fname: fname,
+      lname: lname,
+      mob1: mob1,
+      mob2: mob2,
+      email: email,
+      password: pswd,
+      dob: dob,
+      age: age,
+      gender: gender,
     };
 
   con.query(query, function (err, result, fields) {
