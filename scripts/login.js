@@ -12,10 +12,8 @@ router.post("/login", (req, res) => {
 
   con.query(query, function (err, result, fields) {
     if (err) throw err;
-    if (result != null) res11="Logged in successfully.";
-    else res11="Username or Password are not correct.";
-    res.send(res11); 
-    
+    if (result && result.length > 0) 
+    res11="Logged in successfully.",
     person = {
       user: result[0]['userID'],
       fname: result[0]['fname'],
@@ -28,6 +26,9 @@ router.post("/login", (req, res) => {
       age: result[0]['age'],
       gender: result[0]['gender'],
     }
+
+    else res11="Username or Password are not correct.";
+    res.send(res11); 
   });
 });
 
