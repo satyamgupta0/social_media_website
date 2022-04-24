@@ -9,7 +9,7 @@ let id;
 const router = express.Router();
 
 router.get("/profile", (req, res) => {
-    let username = '12489';
+    let username = 'user1';
     id = username;
     let query1 =   
       "SELECT COUNT(*) AS Posts FROM posts WHERE uploaderID = '" + username + "'";

@@ -35,6 +35,7 @@ WHERE uploaderID IN
     where userID = 12489
 );
 
+
 -- To get friend of friends
 SELECT friendId AS Friends
 FROM friendships
@@ -43,6 +44,15 @@ WHERE userID IN
 	SELECT friendId
     FROM friendships
     WHERE userID = 12489
+);
+--Satyam Version
+select distinct userID as friends
+from friendships
+where friendId in 
+( 
+      select friendID 
+      from friendships 
+      where userID='user11'
 );
 
 -- To get pending requests
