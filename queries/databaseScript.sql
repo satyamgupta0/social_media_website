@@ -33,6 +33,7 @@ create table friendships( -- Describes a relationship bw user and friend
  -- MySQL limits us to create personalized friendship tables
  -- We have to make a common friendship table describing the chatsession
  -- relationship and status
+ --small number in user and larger one in friends 
  userID varchar(300) ,
  friendId varchar(300),
  frndstatus varchar(50),-- blocked, active

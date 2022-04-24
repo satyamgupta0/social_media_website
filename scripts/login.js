@@ -7,7 +7,7 @@ router.post("/login", (req, res) => {
   let user = req.body.user;  
   let pswd =req.body.pswd;
   let query =
-    "SELECT G.*,M.* FROM generalUser G natural join mobilenumbers M WHERE (G.email = '" + user + "' or G.userID = '" + user + "') and G.pswd = '" + pswd + "'";
+    "SELECT G.*,M.* FROM generalUser G natural join mobileNumbers M WHERE (G.email = '" + user + "' or G.userID = '" + user + "') and G.pswd = '" + pswd + "'";
     let res11='';
 
   con.query(query, function (err, result, fields) {
@@ -28,11 +28,14 @@ router.post("/login", (req, res) => {
     }
 
     else res11="Username or Password are not correct.";
-    res.send(res11); 
+    console.log(res11);
+    console.log(person);
+    res.cookie("user",person);
+    res.redirect('/home') 
   });
 });
 
-module.exports = router;
+module.exports = router,person;
 
 // define (function(require)
 // {
