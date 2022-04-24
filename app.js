@@ -16,6 +16,12 @@ app.set("view engine", "ejs"); //for ejs rendering
 
 app.use(express.static("public"));
 
+// console.log(path.join(__dirname,"views/signup.html"));
+// /home/satyam/social/social_media_website/pubilc
+ 
+app.use(require('./scripts/signup'));
+app.use(require('./scripts/login'));
+app.use(require('./scripts/profile'));
 // app.use(session({
 //     secret: 'keyboardcat',
 //     resave: false,
@@ -47,10 +53,6 @@ app.get("/upload", (req, res) => {
   res.sendFile(indexPath);
 });
 
-app.get("/profile", (req, res) => {
-  indexPath = path.join(__dirname, "views/profile.html");
-  res.sendFile(indexPath);
-});
 app.get("/welcome", (req, res) => {
   indexPath = path.join(__dirname, "views/welcome.html");
   res.sendFile(indexPath);
