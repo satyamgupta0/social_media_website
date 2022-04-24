@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8932;
+const port = 8000;
 const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -18,10 +18,10 @@ app.use(express.static("public"));
 
 // console.log(path.join(__dirname,"views/signup.html"));
 // /home/satyam/social/social_media_website/pubilc
- 
-app.use(require('./scripts/signup'));
-app.use(require('./scripts/login'));
-app.use(require('./scripts/profile'));
+
+app.use(require("./scripts/signup"));
+app.use(require("./scripts/login"));
+app.use(require("./scripts/profile"));
 // app.use(session({
 //     secret: 'keyboardcat',
 //     resave: false,
@@ -34,16 +34,18 @@ app.use(require("./scripts/login"));
 
 app.get("/", (req, res) => {
   let indexPath = path.join(__dirname, "views/login.html");
-//   console.log(req.session);
+  //   console.log(req.session);
   res.sendFile(indexPath);
-
 });
 
 app.get("/signup", (req, res) => {
   indexPath = path.join(__dirname, "views/signup.html");
   res.sendFile(indexPath);
 });
-
+app.get("/chat", (req, res) => {
+  indexPath = path.join(__dirname, "views/chat.html");
+  res.sendFile(indexPath);
+});
 app.get("/home", (req, res) => {
   indexPath = path.join(__dirname, "views/home.html");
   res.sendFile(indexPath);
@@ -60,10 +62,10 @@ app.get("/welcome", (req, res) => {
 
 // route for user logout
 app.get("/logout", (req, res) => {
-//   if (req.session.user && req.cookies.user_sid) {
-//     res.clearCookie("user");
-    res.redirect("/");
-//   }
+  //   if (req.session.user && req.cookies.user_sid) {
+  //     res.clearCookie("user");
+  res.redirect("/");
+  //   }
 });
 
 // route for handling 404 requests(unavailable routes)
@@ -72,5 +74,5 @@ app.use(function (req, res, next) {
 });
 
 app.listen(port, () => {
-  console.log(`The application started successfully on port ${port}`);
+  console.log(`The application started successfully on port localhost:${port}`);
 });
