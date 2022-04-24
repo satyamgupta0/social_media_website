@@ -34,3 +34,23 @@ WHERE uploaderID IN
     from friendships
     where userID = 12489
 );
+
+-- To get friend of friends
+SELECT friendId AS Friends
+FROM friendships
+WHERE userID IN
+(
+	SELECT friendId
+    FROM friendships
+    WHERE userID = 12489
+);
+
+-- To get pending requests
+SELECT friendId
+FROM friendships
+WHERE frndstatus = 'pending' and userID = 12489;
+
+-- To get search 
+SELECT userID
+FROM generaluser
+WHERE fname LIKE '%string%' or lname LIKE '%string%';

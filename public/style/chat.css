@@ -1,0 +1,312 @@
+.images{
+    height: 40px;
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-top: 4px;
+    
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body{
+    color: black;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav{
+    width: 100%;  
+    background-color: #5256ad;
+    padding: none;
+    position: fixed;
+    height: 51px;
+    z-index: 10;
+    border-bottom: 2px solid rgb(0, 0, 0);
+
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    
+}
+
+#name2{
+    font-size: 30px;
+   margin-top: -44px;
+   margin-left: 45px;
+   align-items: center;
+   font-family: 'Ms Madi', cursive;
+}
+
+
+nav .search_bar{
+    background: rgb(216, 202, 202);
+    border-radius:10px ;
+    width: 450px;
+    margin-left: 250px;
+    align-items: center;
+    margin-top: 7px;
+
+}
+
+nav .search_bar input[type="search"]{
+    background: transparent;
+    width: 400px;
+    height: 35px;
+    margin-left:5px;
+    font-size: 18px;
+    border: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+nav .container .right_navbar{
+    display: flex;
+    position: absolute;
+    left: 80%;
+    height: 51px;
+    width: 250px;   
+}
+
+
+nav .container .right_navbar li{
+    list-style: none;
+    flex: 1;
+    font-size: 40px;
+    cursor: pointer;
+    align-items: center;
+}
+
+nav .container .right_navbar li a{
+    color: black;
+    transition: all 0.2s ease;
+    display: inline-block;
+    padding: 4px;
+    cursor: pointer;
+    
+
+}
+
+
+nav .container .right_navbar li .active{
+    color: rgb(195, 120,8);
+    border-bottom: 5px solid  rgb(195, 120,8);
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.5 ease;
+}
+
+nav .container .right_navbar li :hover{
+    color:  rgb(195, 120, 8);
+    opacity: 0.8;
+
+}
+
+main {
+    position: relative;
+    top: 51px;
+    background-color: rgb(197, 215, 227);
+}
+
+main .container{
+    display: grid;
+    grid-template-columns: 500px auto;
+    column-gap: 0.5rem;
+}
+
+main .container .left{
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: none;
+    display: flex; 
+    flex-wrap: wrap; 
+    overflow-y: auto; 
+    padding: 2px;
+
+}
+
+.container .left .search_bar{
+    background: rgb(216, 202, 202);
+    border-radius:5px ;
+    width: 475px;
+    margin-left: 5px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.container .left .search_bar input[type="search"]{
+    background: transparent;
+    height: 5vh;
+    margin-left:5px;
+    font-size: 18px;
+    border: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+.container .left .friendlist{
+    margin-top: 5px; 
+    height: 620px; 
+    width: 540px; 
+    flex-wrap: wrap;
+    overflow-y: auto; 
+    padding: 5px;
+}
+
+.container .left .head{
+    height: 60px;
+    padding: 4px;
+    width: 450px;
+    margin-top: 5px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.container .left .head .profile_photo{
+    display: grid;
+    margin-left: 40px;
+}
+
+.container .left .name{
+    margin-left: 0.5rem;
+}
+
+main .container .right{
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.container .right .userheader .Upperblock{
+    border-radius: 10px;
+    background-color: blueviolet;
+    height: 70px;
+    padding:  5px;
+    display: flex;
+} 
+
+.container .right .userheader .Upperblock #userinfo{
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.container .right .userheader .msg_section{
+    background-image: url(./Images/whats.jpg);
+    height: 550px;
+    width: 100%;
+    padding: 50px;
+    overflow-y: auto;
+    border-radius: 10px;
+    
+}
+
+.container .right .userheader .msg_section .mymsg{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.container .right .userheader .msg_section .msgme p{
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    background-color: #905ace;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: white;
+
+}
+
+.container .right .userheader .msg_section .msguser p{
+    position: relative;
+    right: 0;
+    text-align: left;
+    max-width: 65%;
+    padding: 12px;
+    background-color: #a8d67f;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #000;
+
+}
+
+.container .right .userheader .msgme p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #905ace, #905ace, 50%,transparent 50%, transparent);
+}
+
+.container .right .userheader .msguser p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(-135deg, #a8d67f, #a8d67f, 50%,transparent 50%, transparent);
+}
+
+.container .right .userheader .msg_section .mymsg p span{
+    display: block;
+    margin-top: 5px;
+    font-size: 0.86em;
+    opacity: 0.5;
+}
+
+.msgme{
+    justify-content: flex-end;
+}
+
+.container .right .userheader .lowerblock{
+    border-radius: 10px;
+    background-color: blueviolet;
+    height: 62px;
+    padding:  5px;
+    display: flex;
+} 
+
+#lowerblocktext{
+    width: 850px;
+    border-radius: 20px;
+    padding: 10px;
+    height: 50px;
+    background: #ba9bdc;
+    color: white;
+    font-size: 20px;
+}
+
+#click{
+    border-radius: 20px;
+    width: 80px;
+    padding: 2px;
+    font-size: 20px;
+    background-color: #905ace;
+    cursor: pointer;
+}
