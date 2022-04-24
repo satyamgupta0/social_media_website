@@ -1,0 +1,30 @@
+Planning and execution
+
+page authentication using session and cookies ++++
+Error Page **
+login logic **  done
+
+actions {
+profile **
+message
+upload
+home ++
+}
+embedding quries file into scrips : create table if not exists **
+
+signup/login error handling **
+
+
+//Error page and Welcome page
++ Satyam
+* Abhay
+// const con = require("./dbcon");
+const express = require("express");
+const router = express.Router();
+
+router.get("/profile", (req, res) => {
+ 
+    res.render('home');
+
+});
+module.exports = router;
