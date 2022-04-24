@@ -16,6 +16,7 @@ app.use(express.static("public"));
  
 app.use(require('./scripts/signup'));
 app.use(require('./scripts/login'));
+app.use(require('./scripts/profile'));
 
 app.get("/", (req, res)=>{ 
     let indexPath = path.join(__dirname,"views/login.html")
@@ -36,15 +37,14 @@ app.get("/upload", (req, res)=>{
     res.sendFile(indexPath)
 });
 
-app.get("/profile", (req, res)=>{
-    indexPath = path.join(__dirname,"views/profile.html")
-    res.sendFile(indexPath)
-});
+// app.get("/profile", (req, res)=>{
+//     indexPath = path.join(__dirname,"views/profile ")
+//     values.f1(req,res);
+// });
 app.get("/welcome", (req, res)=>{
     indexPath = path.join(__dirname,"views/welcome.html")
     res.sendFile(indexPath)
 });
-
 
 app.listen(port, ()=>{
     console.log(`The application started successfully on port ${port}`);
