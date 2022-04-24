@@ -1,6 +1,7 @@
 const con = require("./dbcon");
 const express = require("express");
 const router = express.Router();
+let alert = require("alert");
 let person;
 
 router.post("/login", (req, res) => {
@@ -14,6 +15,7 @@ router.post("/login", (req, res) => {
     if (err) throw err;
     if (result && result.length > 0) 
     res11="Logged in successfully.",
+    alert("Login Successfull."),
     person = {
       user: result[0]['userID'],
       fname: result[0]['fname'],
