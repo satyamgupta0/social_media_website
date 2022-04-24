@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
-const port = 8000;
+const port = 8080;
 const path = require("path");
 const bodyParser= require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set("view engine", "ejs");//for ejs rendering
 
 app.use(express.static("public"));
 // app.use(express.static(__dirname+'public/style'));
