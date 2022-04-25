@@ -2,7 +2,7 @@ const con = require("./dbcon");
 const express = require("express");
 const router = express.Router();
 let alert = require("alert");
-let person;
+let person='';
 
 router.post("/login", (req, res) => {
   let user = req.body.user;  
@@ -15,7 +15,7 @@ router.post("/login", (req, res) => {
     if (err) throw err;
     if (result && result.length > 0) 
     res11="Logged in successfully.",
-    alert("Login Successfull."),
+    // alert("Login Successfull."),
     person = {
       user: result[0]['userID'],
       fname: result[0]['fname'],
@@ -36,5 +36,6 @@ router.post("/login", (req, res) => {
     res.redirect('/home') 
   });
 });
-
+// console.log("from login");
+// console.log(person);
 module.exports = router,person;
