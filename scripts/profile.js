@@ -5,13 +5,14 @@ const { append } = require("express/lib/response");
 let Posts;
 let Friends;
 let id;
-let data;
+let name;
 
 const router = express.Router();
 
 router.get("/profile", (req, res) => {
-    let username = 'user1';
+    let username = '12489';
     id = username;
+    name = username;
     let query1 =   
       "SELECT COUNT(*) AS Posts FROM posts WHERE uploaderID = '" + username + "'";
     let query2 =   
@@ -34,8 +35,7 @@ router.get("/profile", (req, res) => {
     con.query(query3, function (err, result, fields) {
         if (err) throw err;
         if (result && result.length > 0) 
-        data = JSON.parse(JSON.stringify(result))
-        res.render('profile',{data:data,posts:Posts,friends:Friends,Username:id})
+        res.render('profile',{data:result,posts:Posts,friends:Friends,Username:id,Name:name})
       });
 
   });
