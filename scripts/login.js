@@ -30,8 +30,6 @@ router.post("/login", (req, res) => {
     }
 
     else res11="Username or Password are not correct.";
-    console.log(res11);
-    console.log(person);
     res.cookie("user",person);
     res.redirect('/home') 
   });

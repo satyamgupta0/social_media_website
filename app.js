@@ -22,16 +22,13 @@ app.use(express.static("public"));
 app.use(require("./scripts/signup"));
 app.use(require("./scripts/login"));
 app.use(require("./scripts/profile"));
-
+app.use(require("./scripts/chat"));
 // app.use(session({
 //     secret: 'keyboardcat',
 //     resave: false,
 //     saveUninitialized: true,
 //     cookie: { secure: true }
 //   }))
-
-app.use(require("./scripts/signup"));
-app.use(require("./scripts/login"));
 
 app.get("/", (req, res) => {
   let indexPath = path.join(__dirname, "views/login.html");
@@ -43,15 +40,13 @@ app.get("/signup", (req, res) => {
   indexPath = path.join(__dirname, "views/signup.html");
   res.sendFile(indexPath);
 });
+app.use(require("./scripts/home"));
+
 app.get("/chat", (req, res) => {
   indexPath = path.join(__dirname, "views/chat.html");
   res.sendFile(indexPath);
 });
-app.use(require("./scripts/home"));
-// app.get("/home", (req, res) => {
-//   indexPath = path.join(__dirname, "views/home.html");
-//   res.sendFile(indexPath);
-// });
+
 app.get("/upload", (req, res) => {
   indexPath = path.join(__dirname, "views/upload.html");
   res.sendFile(indexPath);

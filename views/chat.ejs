@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style/chat.css">
+</head>
+<body>
+    <!-- -------------------------header------------------------- -->
+    <nav>
+        <div class="container">
+            <div class="left_navabar">
+                <img src="images/Logo1.png" class="images">
+                <h3 id="name2">Friends.com</h3>
+            </div> 
+             <div class="search_bar">
+                  <i class="uil uil-search"></i>
+                  <input type="search" placeholder="Search For a Friend">
+             </div>
+             <div class="right_navbar">
+                 <li><a href="/home" class="btn"><i class="uil uil-home" ></i></a></li>
+                 <li><a href="/upload" class="btn"><i class="uil uil-plus" > </i></a></li>
+                 <li><a href="#" class="btn active"><i class="uil uil-chat" ></i></a></li>
+                 <li><a href="/profile" class="btn"><img src="images/man.png" alt="" class="images" id="profile"></a></li>
+                 <li><a href="/logout" class="btn"><i class="uil uil-exit"></i></a></li>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="left">
+                <div style="background-color: blueviolet; width: 800px; height: 70px; border-radius: 10px;">
+                    <div class="search_bar">
+                        <i class="uil uil-search"></i>
+                        <input type="search" placeholder="Search For a Friend">
+                    </div>
+                </div>
+                <div class="friendlist">
+                    <% chatlist.forEach((item)=>{%>
+                    <button class="head">
+                        <div>
+                           <img src="images/man.png" alt="" class="images">&nbsp;
+                        </div>
+                        <div>
+                           <h3 style="padding: 5px; margin-top: 3px;"><%=item.fromuser%> TO <%=item.toUser%></h3>
+                        &nbsp;   <span style="margin-left: 3px;"><%=item.message%></span>
+                        </div>
+                    </button>
+                    <%});%>
+                    <!-- <button class="head">
+                        <div>
+                           <img src="images/man.png" alt="" class="images">&nbsp;
+                        </div>
+                        <div>
+                           <h3 style="padding: 5px; margin-top: 1px;">Name1</h3>
+                        &nbsp;   <span">Last Message</span>
+                        </div>
+                    </button>
+                    <button class="head">
+                        <div>
+                           <img src="images/man.png" alt="" class="images">&nbsp;
+                        </div>
+                        <div>
+                           <h3 style="padding: 5px; margin-top: 3px;">Name1</h3>
+                        &nbsp;   <span style="margin-left: 3px;">Last Message</span>
+                        </div>
+                    </button>
+                    <button class="head">
+                        <div>
+                           <img src="images/man.png" alt="" class="images">&nbsp;
+                        </div>
+                        <div>
+                           <h3 style="padding: 5px; margin-top: 3px;">Name1</h3>
+                        &nbsp;   <span style="margin-left: 3px;">Last Message</span>
+                        </div>
+                    </button>
+                    <button class="head">
+                        <div>
+                           <img src="images/man.png" alt="" class="images">&nbsp;
+                        </div>
+                        <div>
+                           <h3 style="padding: 5px; margin-top: 3px;">Name1</h3>
+                        &nbsp;   <span style="margin-left: 3px;">Last Message</span>
+                        </div>
+                    </button>
+                    <button class="head">
+                        <div>
+                           <img src="images/man.png" alt="" class="images">&nbsp;
+                        </div>
+                        <div>
+                           <h3 style="padding: 5px; margin-top: 3px;">Name1</h3>
+                        &nbsp;   <span style="margin-left: 3px;">Last Message</span>
+                        </div>
+                    </button>
+                    <button class="head">
+                        <div>
+                           <img src="images/man.png" alt="" class="images">&nbsp;
+                        </div>
+                        <div>
+                           <h3 style="padding: 5px; margin-top: 3px;">Name1</h3>
+                        &nbsp;   <span style="margin-left: 3px;">Last Message</span>
+                        </div>
+                    </button>
+                    <button class="head">
+                        <div>
+                           <img src="images/man.png" alt="" class="images">&nbsp;
+                        </div>
+                        <div>
+                           <h3 style="padding: 5px; margin-top: 3px;">Name1</h3>
+                        &nbsp;   <span style="margin-left: 3px;">Last Message</span>
+                        </div>
+                    </button>
+                    <button class="head">
+                        <div>
+                           <img src="images/man.png" alt="" class="images">&nbsp;
+                        </div>
+                        <div>
+                           <h3 style="padding: 5px; margin-top: 3px;">Name1</h3>
+                        &nbsp;   <span style="margin-left: 3px;">Last Message</span>
+                        </div>
+                    </button>
+                    <button class="head">
+                        <div>
+                           <img src="images/man.png" alt="" class="images">&nbsp;
+                        </div>
+                        <div>
+                           <h3 style="padding: 5px; margin-top: 3px;">Name1</h3>
+                        &nbsp;   <span style="margin-left: 3px;">Last Message</span>
+                        </div>
+                    </button> -->
+
+                    
+                </div>
+            </div>
+            <div class="right">
+                 <div class="userheader">
+                    <div class="Upperblock">
+                        <div>
+                            <img src="images/man.png" alt="" class="images" style="margin-left: 5px; height: 50px; width: 50px;">
+                        </div>
+                        <div id="userinfo">
+                            <h3>Mayank Mangal Mourya</h3>
+                            <span style="color: white; margin-top: -30px;">Status : active</span>
+                        </div>
+                    </div>
+                    <div class="msg_section">
+                        <% chatlist.forEach((item)=>{%>
+                            <% if(item.toUser === '12489'){ %>
+                                <div class="mymsg msguser">
+                                    <p><%=item.message%><br><span><%=item.tmstp%></span></p>
+                                </div>
+                            <% } else{ %>  
+                                <div class="mymsg msgme">
+                                    <p><%=item.message%><br><span><%=item.tmstp%></span></p>
+                                </div>
+                            <% } %>
+                        <%});%>
+                        <!-- <div class="mymsg msguser">
+                            <p>Hello<br><span>12:17</span></p>
+                        </div>
+                        <div class="mymsg msgme">
+                            <p>How are You styam.<br><span>12:15</span></p>
+                        </div>
+                        <div class="mymsg msguser">
+                            <p>fine Mayank ! tell me about Yourself<br><span>12:17</span></p>
+                        </div>
+                        <div class="mymsg msgme">
+                            <p>Good ! I am also fine. satyam<br><span>12:15</span></p>
+                        </div>
+                        <div class="mymsg msguser">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nemo aut dolore. Magni eveniet officiis inventore quisquam aut nostrum enim!<br><span>12:17</span></p>
+                        </div>
+                        <div class="mymsg msgme">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, totam.<br><span>12:15</span></p>
+                        </div>
+                        <div class="mymsg msguser">
+                            <p>Lorem ipsum dolor sit amet.<br><span>12:17</span></p>
+                        </div>
+                        <div class="mymsg msgme">
+                            <p>Hi<br><span>12:15</span></p>
+                        </div>
+                        <div class="mymsg msguser">
+                            <p>Hello<br><span>12:17</span></p>
+                        </div>
+                    </div> -->
+                    <div class="lowerblock">
+                        <form action="#">
+                            <input type="text" placeholder="Type Message Here...." id="lowerblocktext" required>
+                            <button type="submit" id="click">Send</button>
+                        </form>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -20,6 +20,11 @@ WHERE sessionid IN
     WHERE userID = 12489
 );
 
+-- To get chat list
+SELECT * 
+FROM chat
+WHERE fromuser = '12489' or touser = '12489'; 
+
 -- To get posts of user
 SELECT *
 FROM posts
@@ -45,7 +50,7 @@ WHERE userID IN
     FROM friendships
     WHERE userID = 12489
 );
---Satyam Version
+-- Satyam Version
 select distinct userID as friends
 from friendships
 where friendId in 
