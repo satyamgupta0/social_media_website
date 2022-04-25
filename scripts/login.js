@@ -15,7 +15,7 @@ router.post("/login", (req, res) => {
     if (err) throw err;
     if (result && result.length > 0) 
     res11="Logged in successfully.",
-    alert("Login Successfull."),
+    // alert("Login Successfull."),
     person = {
       user: result[0]['userID'],
       fname: result[0]['fname'],
