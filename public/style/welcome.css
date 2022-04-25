@@ -1,0 +1,81 @@
+.images{
+    height: 40px;
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+}
+
+.header{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+   
+}
+
+body{
+    background-image: linear-gradient(to right, red , yellow);
+}
+
+
+
+.friendlist .container1{
+    
+    top: 100px;
+    left: 30vh;
+    height: 75vh;
+    position: fixed;
+    overflow-y: scroll;
+    width: 150vh;
+    background-color: rgb(222, 237, 232);
+    border-radius: 10px;
+    padding: 5px;
+    overflow-x: hidden;
+    
+}
+
+.friendlist .container1 .header{
+    border-bottom: 2px solid black;
+}
+
+.friendlist .container1 .head{
+    display: flex;
+    padding: 5px;
+   
+}
+
+.friendlist .container1 .name{
+    margin-left: 0.5rem;
+}
+
+.friendlist .container1 .button{
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(89, 200, 243);
+    height: 28px;
+    position: relative;
+    margin-left: 600px;
+}
+
+#button{
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2px;
+    background-color: rgb(89, 200, 243);
+    height: 28px;
+    width: 47px;
+    position: relative;
+    margin: auto;
+    margin-top: 600px;
+}
