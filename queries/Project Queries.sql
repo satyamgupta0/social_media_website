@@ -64,3 +64,8 @@ WHERE frndstatus = 'pending' and userID = 12489;
 SELECT userID
 FROM generaluser
 WHERE fname LIKE '%string%' or lname LIKE '%string%';
+
+-- To get posts of user
+SELECT image
+FROM posts
+WHERE uploaderID = 12489;
