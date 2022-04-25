@@ -18,3 +18,13 @@ signup/login error handling **
 //Error page and Welcome page
 + Satyam
 * Abhay
+// const con = require("./dbcon");
+const express = require("express");
+const router = express.Router();
+
+router.get("/profile", (req, res) => {
+ 
+    res.render('home');
+
+});
+module.exports = router;
