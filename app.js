@@ -40,11 +40,13 @@ app.get("/signup", (req, res) => {
   indexPath = path.join(__dirname, "views/signup.html");
   res.sendFile(indexPath);
 });
+app.use(require("./scripts/home"));
 
-app.get("/home", (req, res) => {
-  indexPath = path.join(__dirname, "views/home.html");
+app.get("/chat", (req, res) => {
+  indexPath = path.join(__dirname, "views/chat.html");
   res.sendFile(indexPath);
 });
+
 app.get("/upload", (req, res) => {
   indexPath = path.join(__dirname, "views/upload.html");
   res.sendFile(indexPath);
