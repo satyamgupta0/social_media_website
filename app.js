@@ -74,6 +74,10 @@ app.get("/welcome", (req, res) => {
   indexPath = path.join(__dirname, "views/welcome.html");
   res.sendFile(indexPath);
 });
+app.get("/error", (req, res) => {
+  indexPath = path.join(__dirname, "views/error.html");
+  res.sendFile(indexPath);
+});
 
 // route for user logout
 app.get("/logout", (req, res) => {
