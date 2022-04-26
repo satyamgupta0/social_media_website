@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5256ad;
+  }
+  
+  .drag-area {
+    position: absolute;
+    margin-bottom: 235px;
+    margin-top: 65px;
+    border: 1.5px dashed #fff;
+    height: 500px;
+    width: 600px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .drag-area.active {
+    border: 2px solid #fff;
+  }
+  
+  .drag-area .icon {
+    max-width: 20%;
+    max-height: 100%;
+    font-size: 10px;
+    color: #fff;
+  }
+  
+  .drag-area header {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  .drag-area span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+  }
+  
+  .drag-area button {
+    padding: 8px 21px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .drag-area #upicon {
+    height: 100px;
+  }
+  
+  .caption {
+    margin-top: 430px;
+  }
+  
+  .caption #caption {
+    height: 150px;
+    width: 600px;
+    border-radius: 10px;
+    background-color: #5256ad;
+    border: 1px solid #fff;
+    color:#ffff;
+    box-sizing: border-box;
+    padding: 3px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .caption div {
+    color: #fff;
+    margin-left: 240px;
+    font-size: large;
+    font-weight: 200;
+  }
+  
+  #btn{
+    margin: auto;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 21px;
+    font-size: 15px;
+    font-weight: 500;
+    border:#21257a;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 10px;
+    cursor: pointer;
+  }

@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 let alert = require("alert");
 let person='';
+// var LocalStorage = require('node-localstorage').LocalStorage;
 
 router.post("/login", (req, res) => {
   let user = req.body.user;  
@@ -14,7 +15,8 @@ router.post("/login", (req, res) => {
   con.query(query, function (err, result, fields) {
     if (err) throw err;
     if (result && result.length > 0) 
-    res11="Logged in successfully.",
+    {
+    res11="Logged in successfully.";
     // alert("Login Successfull."),
     person = {
       userID: result[0]['userID'],
@@ -28,10 +30,15 @@ router.post("/login", (req, res) => {
       age: result[0]['age'],
       gender: result[0]['gender'],
     }
-
+    // res.cookie('user', JSON.stringify(person), { maxAge: 900000,json: true, httpOnly: true });
+    // res.cookie('user',person, { maxAge: 900000, httpOnly: true });
+    
+  }
     else res11="Username or Password are not correct.";
     res.cookie("user",person);
     console.log("from login");
+    console.log("Cookie Stored");
+
     res.redirect('/home') 
   });
 });
