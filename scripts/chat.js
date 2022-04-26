@@ -4,8 +4,9 @@ const { append } = require("express/lib/response");
 
 const router = express.Router();
 
+
 router.get("/chat", (req, res) => {
-    let username = '12489';
+  let username = req.cookies.user.user;
     id = username;
     let query1 =   
       "SELECT * FROM chat WHERE fromuser = '" + username + "'" + " OR touser = '" + username + "'";
