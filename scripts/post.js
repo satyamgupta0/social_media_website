@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/post", (req, res) => {
- const userid='user1';
+ const userid=req.cookies.user.user;
  const imageurl=req.body.
     res.render('home');
 
