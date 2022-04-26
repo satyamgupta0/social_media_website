@@ -33,7 +33,7 @@ WHERE uploaderID = 12489;
 
 -- To get posts of friends
 SELECT *
-FROM posts
+FROM posts NATURAL JOIN reaction
 WHERE uploaderID IN 
 (
 	select friendId

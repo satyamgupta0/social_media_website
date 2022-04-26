@@ -24,6 +24,7 @@ app.use(require("./scripts/login"));
 app.use(require("./scripts/profile"));
 app.use(require("./scripts/chat"));
 app.use(require("./scripts/home"));
+app.use(require("./scripts/test"));
 // app.use(session({
 //     secret: 'keyboardcat',
 //     resave: false,
