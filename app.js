@@ -23,6 +23,24 @@ app.use(require("./scripts/signup"));
 app.use(require("./scripts/login"));
 app.use(require("./scripts/profile"));
 app.use(require("./scripts/chat"));
+app.use(require("./scripts/like"));
+
+
+
+
+
+app.use(require("./scripts/test"));
+// app.get("/test", (req, res) => {
+//   res.write("Hello From the test.js <br>");
+//   // res.write(JSON.stringify(req.cookies.user));
+//   let person = req.cookies.user;
+//   res.write(JSON.stringify(person));
+//   res.write(person.user);
+//   res.send();
+// });
+
+
+
 // app.use(session({
 //     secret: 'keyboardcat',
 //     resave: false,
@@ -61,6 +79,8 @@ app.get("/welcome", (req, res) => {
 app.get("/logout", (req, res) => {
   //   if (req.session.user && req.cookies.user_sid) {
   //     res.clearCookie("user");
+  res.clearCookie("user");
+  console.log("Cookie cleared");
   res.redirect("/");
   //   }
 });

@@ -10,7 +10,7 @@ let name;
 const router = express.Router();
 
 router.get("/profile", (req, res) => {
-    let username = '12489';
+    let username = req.cookies.user.user;
     id = username;
     name = username;
     let query1 =   
