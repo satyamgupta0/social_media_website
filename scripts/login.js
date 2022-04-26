@@ -17,7 +17,7 @@ router.post("/login", (req, res) => {
     res11="Logged in successfully.",
     // alert("Login Successfull."),
     person = {
-      user: result[0]['userID'],
+      userID: result[0]['userID'],
       fname: result[0]['fname'],
       lname: result[0]['lname'],
       email: result[0]['email'],
@@ -31,6 +31,7 @@ router.post("/login", (req, res) => {
 
     else res11="Username or Password are not correct.";
     res.cookie("user",person);
+    console.log("from login");
     res.redirect('/home') 
   });
 });
