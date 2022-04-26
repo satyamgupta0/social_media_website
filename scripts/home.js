@@ -35,7 +35,7 @@ router.get("/home", (req, res) => {
     indexPath = "/home/satyam/social/social_media_website/views/home.html";
     console.log(indexPath);
     console.log(person);
-    res.sendFile(indexPath);
+    res.render("home");
 });
 
 // router.post('/home',(req,res)=>{

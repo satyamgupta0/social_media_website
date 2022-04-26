@@ -23,7 +23,8 @@ WHERE sessionid IN
 -- To get chat list
 SELECT * 
 FROM chat
-WHERE fromuser = '12489' or touser = '12489'; 
+WHERE fromuser = '12489' or touser = '12489'
+GROUP BY sessionid; 
 
 -- To get posts of user
 SELECT *

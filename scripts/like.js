@@ -9,7 +9,7 @@ router.get("/like", (req, res) => {
  con.query(query3, function (err, result, fields) {
     if (err) throw err;
     if (result && result.length > 0) 
-    res.redirect('profile')
+    res.redirect('/profile')
   });
 
 });
