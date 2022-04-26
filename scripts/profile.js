@@ -10,15 +10,17 @@ let name;
 const router = express.Router();
 
 router.get("/profile", (req, res) => {
-    let username = req.cookies.user.user;
-    id = username;
-    name = username;
+
+    let person = req.cookies.user;
+    id = person.userID;
+    name = person.fname + " " + person.lname;
+
     let query1 =   
-      "SELECT COUNT(*) AS Posts FROM posts WHERE uploaderID = '" + username + "'";
+      "SELECT COUNT(*) AS Posts FROM posts WHERE uploaderID = '" + person.userID + "'";
     let query2 =   
-      "SELECT COUNT(*) AS Friends FROM friendships WHERE userID = '" + username + "'";
+      "SELECT COUNT(*) AS Friends FROM friendships WHERE userID = '" + person.userID + "'";
     let query3 =   
-      "SELECT * FROM posts NATURAL JOIN reaction WHERE uploaderID = '" + username + "'";
+      "SELECT * FROM posts NATURAL JOIN reaction WHERE uploaderID = '" + person.userID + "'";
 
     con.query(query1, function (err, result, fields) {
       if (err) throw err;

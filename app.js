@@ -23,6 +23,8 @@ app.use(require("./scripts/signup"));
 app.use(require("./scripts/login"));
 app.use(require("./scripts/profile"));
 app.use(require("./scripts/chat"));
+app.use(require("./scripts/home"));
+app.use(require("./scripts/test"));
 app.use(require("./scripts/like"));
 
 
@@ -38,6 +40,7 @@ app.use(require("./scripts/test"));
 //   res.write(person.user);
 //   res.send();
 // });
+
 
 
 
@@ -58,7 +61,6 @@ app.get("/signup", (req, res) => {
   indexPath = path.join(__dirname, "views/signup.html");
   res.sendFile(indexPath);
 });
-app.use(require("./scripts/home"));
 
 app.get("/chat", (req, res) => {
   indexPath = path.join(__dirname, "views/chat.html");

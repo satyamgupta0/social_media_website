@@ -10,10 +10,8 @@ router.post("/like", (req, res) => {
 
   con.query(query, function (err, result, fields) {
     if (err) throw err;
-    else {
-      console.log("Liked the post");
-      res.redirect("/profile");
-    }
+    if (result && result.length > 0) 
+    res.redirect('/profile')
   });
 });
 module.exports = router;

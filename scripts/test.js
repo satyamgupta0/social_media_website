@@ -4,11 +4,11 @@ const router = express.Router();
 
 
 router.get("/test", (req, res) => { 
-    //     let user=req.cookies.user;
-
-    // res.write(user);
+        let person=req.cookies.user;
+    res.write(JSON.stringify(person));
     res.write("Hello From the test.js")
-    res.write(req.cookies.user.user);
+    res.write(person.userID);
+    console.log(person);
     res.send();
 
 });

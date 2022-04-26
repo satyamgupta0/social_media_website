@@ -44,7 +44,7 @@
             /></a>
           </li>
           <li>
-            <a href="#" class="btn"><i class="uil uil-exit"></i></a>
+            <a href="/logout" class="btn"><i class="uil uil-exit"></i></a>
           </li>
         </div>
       </div>
@@ -57,19 +57,20 @@
           <!-- ---------------posts------------------------- -->
           <div class="posts">
             <!-- -----------------------post1--------------------------- -->
+            <% Posts.forEach((item)=>{%>
             <div class="post">
               <div class="head">
                 <div class="profile_photo">
                   <img src="images/man.png" alt="" class="images" />
                 </div>
                 <div class="name">
-                  <h3>Tejas Gundale</h3>
+                  <h3><%=item.uploaderID%></h3>
                   <small>10 Min ago</small>
                 </div>
               </div>
 
               <div class="photo">
-                <img src="images/post1.png" alt="" class="post_photo" />
+                <img src="<%=item.image%>" alt="" class="post_photo" />
               </div>
 
               <div class="action-button">
@@ -93,21 +94,20 @@
                 <span
                   ><img src="images/profile4.png" alt="" class="image"
                 /></span>
-                <p>Liked by <b>Name1</b> and <b>123 others</b></p>
+                <p>Likes : <b><%=item.likes%></b></p>
               </div>
 
               <div class="caption">
                 <p>
-                  <b>Tejas Gundale</b>Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit.
+                  <b><%=item.uploaderID%> : </b><%=item.caption%>
                 </p>
               </div>
 
               <div class="comments text-muted">view all 23 comments</div>
             </div>
-
+            <%});%>
             <!-- ---------------------------post2----------------------------- -->
-            <div class="post">
+            <!-- <div class="post">
               <div class="head">
                 <div class="profile_photo">
                   <img src="images/profile2.png" alt="" class="images" />
@@ -154,10 +154,10 @@
               </div>
 
               <div class="comments text-muted">view all 23 comments</div>
-            </div>
+            </div> -->
 
             <!-- -------------------------------------------post3------------------------------- -->
-            <div class="post">
+            <!-- <div class="post">
               <div class="head">
                 <div class="profile_photo">
                   <img src="images/profile3.png" alt="" class="images" />
@@ -204,9 +204,9 @@
               </div>
 
               <div class="comments text-muted">view all 23 comments</div>
-            </div>
+            </div> -->
             <!-- --------------------------------------------------------------post4--------------------------- -->
-            <div class="post">
+            <!-- <div class="post">
               <div class="head">
                 <div class="profile_photo">
                   <img src="images/profile4.png" alt="" class="images" />
@@ -250,10 +250,10 @@
                   <b>Name 3</b>Lorem ipsum dolor sit amet consectetur
                   adipisicing elit.
                 </p>
-              </div>
+              </div> 
 
-              <div class="comments text-muted">view all 23 comments</div>
-            </div>
+              <div class="comments text-muted">view all 23 comments</div> 
+            </div> -->
           </div>
         </div>
 
