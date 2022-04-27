@@ -5,10 +5,10 @@ const router = express.Router();
 let postID = "post35";
 
 router.post("/like", (req, res) => {
-  let query =
+  let query1 =
     "UPDATE reaction SET likes = likes + 1 where postID = '" + postID + "'";
 
-  con.query(query, function (err, result, fields) {
+  con.query(query1, function (err, result, fields) {
     if (err) throw err;
     if (result && result.length > 0) 
     res.redirect('/profile')
