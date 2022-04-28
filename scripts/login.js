@@ -27,12 +27,13 @@ router.post("/login", (req, res) => {
       dob: result[0]['dateOfBirth'],
       age: result[0]['age'],
       gender: result[0]['gender'],
-    }
+    },
+    res.cookie("user",person),
+    res.redirect('/home');
 
     else res11="Username or Password are not correct.";
-    res.cookie("user",person);
-    console.log("from login");
-    res.redirect('/home') 
+    res.redirect('/error');
+    
   });
 });
 // console.log("from login");
