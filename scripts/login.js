@@ -33,10 +33,11 @@ router.post("/login", (req, res) => {
     },
     res.cookie("user",person),
     res.redirect('/home');
-
-    else res11="Username or Password are not correct.";
-    res.redirect('/error');
-    
+  }
+    else {res11="Username or Password are not correct.";
+    console.log(res11);
+    res.redirect('/error'); 
+  }
 
   });
 });
