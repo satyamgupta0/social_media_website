@@ -1,4 +1,4 @@
-.images{
+.images {
     height: 40px;
     width: 40px;
     aspect-ratio: 1/1;
@@ -7,7 +7,7 @@
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,19 +16,19 @@
     border: none;
 }
 
-body{
+body {
     color: black;
     overflow-x: hidden;
 }
 
-.container{
+.container {
     width: 100%;
     margin: 0 auto;
 }
 
-nav{
-    width: 100%;  
-    background-color:  #5256ad;
+nav {
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(20, 23, 186, 0.4), rgb(38, 208, 227), rgb(137, 128, 201));
     padding: none;
     position: fixed;
     height: 51px;
@@ -37,53 +37,74 @@ nav{
 
 }
 
-nav .container{
+nav .container {
     display: flex;
     align-items: center;
-    
+
 }
 
-#name2{
+#name2 {
     font-size: 30px;
-   margin-top: -50px;
-   margin-left: 45px;
-   align-items: center;
-   font-family: 'Ms Madi', cursive;
-}
-
-
-nav .search_bar{
-    background: rgb(216, 202, 202);
-    border-radius:10px ;
-    width: 450px;
-    margin-left: 250px;
+    margin-top: -50px;
+    margin-left: 45px;
     align-items: center;
-    margin-top: 7px;
+    font-family: 'Ms Madi', cursive;
 }
 
-nav .search_bar input[type="search"]{
+
+nav .search_bar {
+    background: rgb(216, 202, 202);
+    border-radius: 10px;
+    width: 450px;
+    margin-left: 200px;
+    align-items: center;
+    margin-top: 2px;
+}
+
+nav .search_bar input[type="search"] {
     background: transparent;
     width: 400px;
     height: 35px;
-    margin-left:5px;
+    margin-left: 5px;
     font-size: 18px;
     border: none;
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
-nav .container .right_navbar{
+nav .container .right_navbar {
     display: flex;
     position: absolute;
     left: 80%;
     height: 51px;
-    width: 250px;   
+    width: 250px;
+}
+nav .container .mid{
+    display: flex;
+    position: relative;
+    margin-left: 80px;
+    margin-top: 5px;
+}
+
+button{
+    height: 40px;
+    width: 100px;
+    background-color: aqua;
+    font: 30px;
+    border: 3px solid blue;
+    border-radius: 10px;
+}
+
+nav .container .mid button :hover{
+    background-color: white;
+    color: black;
 }
 
 
-nav .container .right_navbar li{
+
+nav .container .right_navbar li {
     list-style: none;
     flex: 1;
     font-size: 40px;
@@ -91,91 +112,98 @@ nav .container .right_navbar li{
     align-items: center;
 }
 
-nav .container .right_navbar li a{
+nav .container .right_navbar li a {
     color: black;
     transition: all 0.2s ease;
     display: inline-block;
     padding: 4px;
     cursor: pointer;
-    
+
 
 }
 
 
-nav .container .right_navbar li .active{
-    color: rgb(195, 120, 8);
-    border-bottom: 5px solid  rgb(195, 120, 8);
+nav .container .right_navbar li .active {
+    color : rgb(17,0,255);
+    border-bottom: 5px solid  rgb(17,0,255);
     width: 100%;
     border-radius: 5px;
     transition: 0.5 ease;
 }
 
-nav .container .right_navbar li :hover{
-    color:  rgb(195, 120, 8);
+nav .container .right_navbar li :hover {
+    color:  white;
     opacity: 1;
 
 }
 
 
 
-main{
+main {
     position: relative;
-    top: 51px;  
+    top: 51px;
     background-color: rgb(197, 215, 227);
 }
 
-main .container{
+main .container {
     display: grid;
-    grid-template-columns: 850px auto;
-    column-gap: 2rem;
+    grid-template-columns: 85%;
+
 }
 
 
-.left .posts .post{
+.left .posts .post {
     margin-left: 195px;
     margin-top: 10px;
-    background-color: rgb(228, 238, 238);
+    /* background-color: rgb(228, 238, 238); */
+    background-color: white;
     border-radius: 10px;
     padding: 20px;
     font-size: 0.95rem;
     line-height: 1.5;
+
 }
 
-.left .post .head{
+.left .post .head {
     display: flex;
-   
+
 }
 
-.left .post .name{
+.left .post .name {
     margin-left: 0.5rem;
 }
 
-.left .post .photo{
+.left .post .photo {
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0.7rem 0;
+    width: 1080px;
 }
 
-.post_photo{
-    height: 500px;
-    width: 600px;
+.post_photo {
+    height: 566px;
+    width: 900px;
     border-radius: 10px;
+    display: block;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* width: 100%; */
     box-shadow: 10px 10px 5px #ccc;
 }
 
-.left .post .action-button{
+.left .post .action-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.4rem ;
-    
+    font-size: 1.4rem;
+
 }
 
-.left .liked-by{
+.left .liked-by {
     display: flex;
 }
 
-.left .liked-by .image{
+.left .liked-by .image {
     width: 20px;
     height: 20px;
     display: block;
@@ -185,14 +213,14 @@ main .container{
     margin-left: -0.6rem;
 }
 
-.left .liked-by p{
+.left .liked-by p {
     margin-left: .5rem;
 }
 
 
 
-.right .container1{
-    
+.right .container1 {
+
     top: 61px;
     height: 45vh;
     position: fixed;
@@ -201,10 +229,11 @@ main .container{
     background-color: rgb(222, 237, 232);
     border-radius: 10px;
     padding: 5px;
-    
+
 }
-.right .container2{
-    
+
+.right .container2 {
+
     top: 63px;
     height: 44vh;
     position: fixed;
@@ -214,24 +243,24 @@ main .container{
     background-color: rgb(222, 237, 232);
     border-radius: 10px;
     padding: 5px;
-    
+
 }
 
-.right .container1 .header{
+.right .container1 .header {
     border-bottom: 2px solid black;
 }
 
-.right .container1 .head{
+.right .container1 .head {
     display: flex;
     padding: 5px;
-   
+
 }
 
-.right .container1 .name{
+.right .container1 .name {
     margin-left: 0.5rem;
 }
 
-.right .container1 .button{
+.right .container1 .button {
     align-items: center;
     border: 2px solid black;
     border-radius: 10px;
@@ -240,21 +269,22 @@ main .container{
     position: relative;
     margin-left: 170px;
 }
-.right .container2 .header{
+
+.right .container2 .header {
     border-bottom: 2px solid black;
 }
 
-.right .container2 .head{
+.right .container2 .head {
     display: flex;
     padding: 5px;
-   
+
 }
 
-.right .container2 .name{
+.right .container2 .name {
     margin-left: 0.5rem;
 }
 
-.right .container2 .button{
+.right .container2 .button {
     align-items: center;
     border: 2px solid black;
     border-radius: 10px;
@@ -264,7 +294,7 @@ main .container{
     margin-left: 150px;
 }
 
-.right .container2 .button1{
+.right .container2 .button1 {
     align-items: center;
     border: 2px solid black;
     border-radius: 10px;
@@ -273,5 +303,3 @@ main .container{
     position: relative;
     margin-left: 10px;
 }
-
-
