@@ -45,7 +45,8 @@ router.post("/reg", (req, res) => {
 
   con.query(sql1, (err, result) => {
     if (err) throw err;
-    else {      
+    else {   
+      res.cookie("user",person);   
       res.redirect('/welcome');      
     }
   });
