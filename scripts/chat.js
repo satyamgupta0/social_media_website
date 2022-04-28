@@ -12,7 +12,7 @@ router.get("/chat", (req, res) => {
 
     con.query(query1, function (err, result, fields) {
         if (err) throw err;
-        if (result && result.length > 0) 
+        if (result && result.length >= 0) 
         res.render('chat',{chatlist:result})
       });
 

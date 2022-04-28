@@ -41,6 +41,14 @@ WHERE uploaderID IN
     where userID = 12489
 );
 
+insert into reaction
+values("P6",20459);
+
+update reaction
+set likes = 200000
+where postid = "P2";
+
+describe reaction;
 
 -- To get friend of friends
 SELECT friendId AS Friends
