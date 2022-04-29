@@ -48,8 +48,6 @@ update reaction
 set likes = 200000
 where postid = "P2";
 
-describe reaction;
-
 -- To get friend of friends
 SELECT friendId AS Friends
 FROM friendships
