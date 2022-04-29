@@ -80,6 +80,18 @@ app.get("/error", (req, res) => {
   indexPath = path.join(__dirname, "views/error.html");
   res.sendFile(indexPath);
 });
+app.get("/friendlist", (req, res) => {
+  indexPath = path.join(__dirname, "views/friendlist.html");
+  res.sendFile(indexPath);
+});
+app.get("/suggestions", (req, res) => {
+  indexPath = path.join(__dirname, "views/suggestion.html");
+  res.sendFile(indexPath);
+});
+app.get("/request", (req, res) => {
+  indexPath = path.join(__dirname, "views/request.html");
+  res.sendFile(indexPath);
+});
 
 // route for user logout
 app.get("/logout", (req, res) => {
@@ -90,6 +102,7 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
   //   }
 });
+
 
 // route for handling 404 requests(unavailable routes)
 app.use(function (req, res, next) {
