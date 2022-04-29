@@ -9,7 +9,7 @@ router.post("/login", (req, res) => {
   let user = req.body.user;  
   let pswd =req.body.pswd;
   let query =
-    "SELECT G.*,M.* FROM generalUser G natural join mobileNumbers M WHERE (G.email = '" + user + "' or G.userID = '" + user + "') and G.pswd = '" + pswd + "'";
+    "SELECT G.*,M.* FROM generaluser G natural join mobilenumbers M WHERE (G.email = '" + user + "' or G.userID = '" + user + "') and G.pswd = '" + pswd + "'";
     let res11='';
 
   con.query(query, function (err, result, fields) {
