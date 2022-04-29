@@ -22,6 +22,16 @@
                   <i class="uil uil-search"></i>
                   <input type="search" placeholder="Search For a Friend">
              </div>
+             <!-- ----------------------------------------changes----------------------------------------------------------- -->
+             <div class="mid">
+                <button>
+                    <a href="/request" >Request</a>
+                </button>&nbsp&nbsp
+                <button>
+                    <a href="/suggestions" id="butn">Suggestions</a>
+                </button>
+            </div>
+            <!-- ---------------------------------------------changes----------------------------------------------------------------- -->
              <div class="right_navbar">
                  <li><a href="/home" class="btn"><i class="uil uil-home" ></i></a></li>
                  <li><a href="/upload" class="btn"><i class="uil uil-plus" > </i></a></li>
@@ -144,13 +154,13 @@
                             <img src="images/man.png" alt="" class="images" style="margin-left: 5px; height: 50px; width: 50px;">
                         </div>
                         <div id="userinfo">
-                            <h3>Mayank Mangal Mourya</h3>
+                            <h3>Mayank Mangal Mourya</h3>       <!--touser-->
                             <span style="color: white; margin-top: -30px;">Status : active</span>
                         </div>
                     </div>
                     <div class="msg_section">
                         <% chatlist.forEach((item)=>{%>
-                            <% if(item.toUser === '12489'){ %>
+                            <% if(item.toUser === Username){ %>
                                 <div class="mymsg msguser">
                                     <p><%=item.message%><br><span><%=item.tmstp%></span></p>
                                 </div>

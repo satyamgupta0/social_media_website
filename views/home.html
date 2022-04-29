@@ -1,422 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="style/home.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- -------------------------header------------------------- -->
     <nav>
-      <div class="container">
-        <div class="left_navabar">
-          <img src="images/Logo1.png" id="logo" class="images" />
-          <h3 id="name2">Friends.com</h3>
+        <div class="container">
+            <div class="left_navabar">
+                <img src="images/Logo1.png" id="logo" class="images" />
+                <h3 id="name2">Friends.com</h3>
+            </div>
+            <div class="search_bar">
+                <i class="uil uil-search"></i>
+                <input type="search" placeholder="Search For a Friend" />
+            </div>
+            <div class="mid">
+                <button>
+                    <a href="" >Request</a>
+                </button>&nbsp&nbsp
+                <button>
+                    <a href="" id="butn">Suggestions</a>
+                </button>
+            </div>
+            <div class="right_navbar">
+                
+                <li>
+                    <a href="" class="btn active"><i class="uil uil-home"></i></a>
+                </li>
+                <li>
+                    <a href="/upload" class="btn"><i class="uil uil-plus"> </i></a>
+                </li>
+                <li>
+                    <a href="/chat" class="btn"><i class="uil uil-chat"></i></a>
+                </li>
+                <li>
+                    <a href="/profile" class="btn"><img src="images/man.png" alt="" class="images" id="profile" /></a>
+                </li>
+                <li>
+                    <a href="/logout" class="btn"><i class="uil uil-exit"></i></a>
+                </li>
+            </div>
         </div>
-        <div class="search_bar">
-          <i class="uil uil-search"></i>
-          <input type="search" placeholder="Search For a Friend" />
-        </div>
-        <div class="right_navbar">
-          <li>
-            <a href="" class="btn active"><i class="uil uil-home"></i></a>
-          </li>
-          <li>
-            <a href="/upload" class="btn"><i class="uil uil-plus"> </i></a>
-          </li>
-          <li>
-            <a href="/chat" class="btn"><i class="uil uil-chat"></i></a>
-          </li>
-          <li>
-            <a href="/profile" class="btn"
-              ><img src="images/man.png" alt="" class="images" id="profile"
-            /></a>
-          </li>
-          <li>
-            <a href="/logout" class="btn"><i class="uil uil-exit"></i></a>
-          </li>
-        </div>
-      </div>
     </nav>
 
     <!-- --------------------------------main---------------------- -->
     <main>
-      <div class="container">
-        <div class="left">
-          <!-- ---------------posts------------------------- -->
-          <div class="posts">
-            <!-- -----------------------post1--------------------------- -->
-            <div class="post">
-              <div class="head">
-                <div class="profile_photo">
-                  <img src="images/man.png" alt="" class="images" />
+        <div class="container">
+            <div class="left">
+                <!-- ---------------posts------------------------- -->
+                <div class="posts">
+                    <!-- -----------------------post1--------------------------- -->
+                    <div class="post">
+                        <div class="head">
+                            <div class="profile_photo">
+                                <img src="images/man.png" alt="" class="images" />
+                            </div>
+                            <div class="name">
+                                <h3>Tejas Gundale</h3>
+                                <small>10 Min ago</small>
+                            </div>
+                        </div>
+
+                        <div class="photo">
+                            <img src="images/post1.png" alt="" class="post_photo" />
+                        </div>
+
+                        <div class="action-button">
+                            <div class="like_comment">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share-alt"></i></span>
+                            </div>
+                            <div class="save">
+                                <span><i class="uil uil-bookmark-full"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="images/profile2.png" alt="" class="image" /></span>
+                            <span><img src="images/profile3.png" alt="" class="image" /></span>
+                            <span><img src="images/profile4.png" alt="" class="image" /></span>
+                            <p>Liked by <b>Name1</b> and <b>123 others</b></p>
+                        </div>
+
+                        <div class="caption">
+                            <p>
+                                <b>Tejas Gundale</b>Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
+                        </div>
+
+                        <div class="comments text-muted">view all 23 comments</div>
+                    </div>
+
+                    <!-- ---------------------------post2----------------------------- -->
+                    <div class="post">
+                        <div class="head">
+                            <div class="profile_photo">
+                                <img src="images/profile2.png" alt="" class="images" />
+                            </div>
+                            <div class="name">
+                                <h3>Name 1</h3>
+                                <small>25 Min ago</small>
+                            </div>
+                        </div>
+
+                        <div class="photo">
+                            <img src="images/post2.png" alt="" class="post_photo" />
+                        </div>
+
+                        <div class="action-button">
+                            <div class="like_comment">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share-alt"></i></span>
+                            </div>
+                            <div class="save">
+                                <span><i class="uil uil-bookmark-full"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="images/profile2.png" alt="" class="image" /></span>
+                            <span><img src="images/profile3.png" alt="" class="image" /></span>
+                            <span><img src="images/profile4.png" alt="" class="image" /></span>
+                            <p>Liked by <b>Name1</b> and <b>123 others</b></p>
+                        </div>
+
+                        <div class="caption">
+                            <p>
+                                <b>Name1</b>Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                            </p>
+                        </div>
+
+                        <div class="comments text-muted">view all 23 comments</div>
+                    </div>
+
+                    <!-- -------------------------------------------post3------------------------------- -->
+                    <div class="post">
+                        <div class="head">
+                            <div class="profile_photo">
+                                <img src="images/profile3.png" alt="" class="images" />
+                            </div>
+                            <div class="name">
+                                <h3>Name 2</h3>
+                                <small>45 Min ago</small>
+                            </div>
+                        </div>
+
+                        <div class="photo">
+                            <img src="images/post3.png" alt="" class="post_photo" />
+                        </div>
+
+                        <div class="action-button">
+                            <div class="like_comment">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share-alt"></i></span>
+                            </div>
+                            <div class="save">
+                                <span><i class="uil uil-bookmark-full"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="images/profile2.png" alt="" class="image" /></span>
+                            <span><img src="images/profile3.png" alt="" class="image" /></span>
+                            <span><img src="images/profile4.png" alt="" class="image" /></span>
+                            <p>Liked by <b>Name1</b> and <b>123 others</b></p>
+                        </div>
+
+                        <div class="caption">
+                            <p>
+                                <b>Name2</b>Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                            </p>
+                        </div>
+
+                        <div class="comments text-muted">view all 23 comments</div>
+                    </div>
+                    <!-- --------------------------------------------------------------post4--------------------------- -->
+                    <div class="post">
+                        <div class="head">
+                            <div class="profile_photo">
+                                <img src="images/profile4.png" alt="" class="images" />
+                            </div>
+                            <div class="name">
+                                <h3>Name 3</h3>
+                                <small>55 Min ago</small>
+                            </div>
+                        </div>
+
+                        <div class="photo">
+                            <img src="images/post4.png" alt="" class="post_photo" />
+                        </div>
+
+                        <div class="action-button">
+                            <div class="like_comment">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share-alt"></i></span>
+                            </div>
+                            <div class="save">
+                                <span><i class="uil uil-bookmark-full"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="images/profile2.png" alt="" class="image" /></span>
+                            <span><img src="images/profile3.png" alt="" class="image" /></span>
+                            <span><img src="images/profile4.png" alt="" class="image" /></span>
+                            <p>Liked by <b>Name1</b> and <b>123 others</b></p>
+                        </div>
+
+                        <div class="caption">
+                            <p>
+                                <b>Name 3</b>Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
+                        </div>
+
+                        <div class="comments text-muted">view all 23 comments</div>
+                    </div>
                 </div>
-                <div class="name">
-                  <h3>Tejas Gundale</h3>
-                  <small>10 Min ago</small>
-                </div>
-              </div>
-
-              <div class="photo">
-                <img src="images/post1.png" alt="" class="post_photo" />
-              </div>
-
-              <div class="action-button">
-                <div class="like_comment">
-                  <span><i class="uil uil-heart"></i></span>
-                  <span><i class="uil uil-comment-dots"></i></span>
-                  <span><i class="uil uil-share-alt"></i></span>
-                </div>
-                <div class="save">
-                  <span><i class="uil uil-bookmark-full"></i></span>
-                </div>
-              </div>
-
-              <div class="liked-by">
-                <span
-                  ><img src="images/profile2.png" alt="" class="image"
-                /></span>
-                <span
-                  ><img src="images/profile3.png" alt="" class="image"
-                /></span>
-                <span
-                  ><img src="images/profile4.png" alt="" class="image"
-                /></span>
-                <p>Liked by <b>Name1</b> and <b>123 others</b></p>
-              </div>
-
-              <div class="caption">
-                <p>
-                  <b>Tejas Gundale</b>Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit.
-                </p>
-              </div>
-
-              <div class="comments text-muted">view all 23 comments</div>
             </div>
 
-            <!-- ---------------------------post2----------------------------- -->
-            <div class="post">
-              <div class="head">
-                <div class="profile_photo">
-                  <img src="images/profile2.png" alt="" class="images" />
-                </div>
-                <div class="name">
-                  <h3>Name 1</h3>
-                  <small>25 Min ago</small>
-                </div>
-              </div>
-
-              <div class="photo">
-                <img src="images/post2.png" alt="" class="post_photo" />
-              </div>
-
-              <div class="action-button">
-                <div class="like_comment">
-                  <span><i class="uil uil-heart"></i></span>
-                  <span><i class="uil uil-comment-dots"></i></span>
-                  <span><i class="uil uil-share-alt"></i></span>
-                </div>
-                <div class="save">
-                  <span><i class="uil uil-bookmark-full"></i></span>
-                </div>
-              </div>
-
-              <div class="liked-by">
-                <span
-                  ><img src="images/profile2.png" alt="" class="image"
-                /></span>
-                <span
-                  ><img src="images/profile3.png" alt="" class="image"
-                /></span>
-                <span
-                  ><img src="images/profile4.png" alt="" class="image"
-                /></span>
-                <p>Liked by <b>Name1</b> and <b>123 others</b></p>
-              </div>
-
-              <div class="caption">
-                <p>
-                  <b>Name1</b>Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit.
-                </p>
-              </div>
-
-              <div class="comments text-muted">view all 23 comments</div>
-            </div>
-
-            <!-- -------------------------------------------post3------------------------------- -->
-            <div class="post">
-              <div class="head">
-                <div class="profile_photo">
-                  <img src="images/profile3.png" alt="" class="images" />
-                </div>
-                <div class="name">
-                  <h3>Name 2</h3>
-                  <small>45 Min ago</small>
-                </div>
-              </div>
-
-              <div class="photo">
-                <img src="images/post3.png" alt="" class="post_photo" />
-              </div>
-
-              <div class="action-button">
-                <div class="like_comment">
-                  <span><i class="uil uil-heart"></i></span>
-                  <span><i class="uil uil-comment-dots"></i></span>
-                  <span><i class="uil uil-share-alt"></i></span>
-                </div>
-                <div class="save">
-                  <span><i class="uil uil-bookmark-full"></i></span>
-                </div>
-              </div>
-
-              <div class="liked-by">
-                <span
-                  ><img src="images/profile2.png" alt="" class="image"
-                /></span>
-                <span
-                  ><img src="images/profile3.png" alt="" class="image"
-                /></span>
-                <span
-                  ><img src="images/profile4.png" alt="" class="image"
-                /></span>
-                <p>Liked by <b>Name1</b> and <b>123 others</b></p>
-              </div>
-
-              <div class="caption">
-                <p>
-                  <b>Name2</b>Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit.
-                </p>
-              </div>
-
-              <div class="comments text-muted">view all 23 comments</div>
-            </div>
-            <!-- --------------------------------------------------------------post4--------------------------- -->
-            <div class="post">
-              <div class="head">
-                <div class="profile_photo">
-                  <img src="images/profile4.png" alt="" class="images" />
-                </div>
-                <div class="name">
-                  <h3>Name 3</h3>
-                  <small>55 Min ago</small>
-                </div>
-              </div>
-
-              <div class="photo">
-                <img src="images/post4.png" alt="" class="post_photo" />
-              </div>
-
-              <div class="action-button">
-                <div class="like_comment">
-                  <span><i class="uil uil-heart"></i></span>
-                  <span><i class="uil uil-comment-dots"></i></span>
-                  <span><i class="uil uil-share-alt"></i></span>
-                </div>
-                <div class="save">
-                  <span><i class="uil uil-bookmark-full"></i></span>
-                </div>
-              </div>
-
-              <div class="liked-by">
-                <span
-                  ><img src="images/profile2.png" alt="" class="image"
-                /></span>
-                <span
-                  ><img src="images/profile3.png" alt="" class="image"
-                /></span>
-                <span
-                  ><img src="images/profile4.png" alt="" class="image"
-                /></span>
-                <p>Liked by <b>Name1</b> and <b>123 others</b></p>
-              </div>
-
-              <div class="caption">
-                <p>
-                  <b>Name 3</b>Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit.
-                </p>
-              </div>
-
-              <div class="comments text-muted">view all 23 comments</div>
-            </div>
-          </div>
+            <!-- --------------End of left ---------------------------- -->
+            
         </div>
-
-        <!-- --------------End of left ---------------------------- -->
-        <div class="right">
-          <div class="container1">
-            <div class="header">
-              <h3>Suggestions for you</h3>
-            </div>
-
-            <div class="head">
-              <div class="profile_photo">
-                <img src="images/profile4.png" alt="" class="images" />
-              </div>
-              <div class="name">
-                <h3>Name 3</h3>
-                <small>3 Mutual Friends</small>
-              </div>
-              <div class="button">
-                <a href=""> Add Friend </a>
-              </div>
-            </div>
-
-            <div class="head">
-              <div class="profile_photo">
-                <img src="images/profile4.png" alt="" class="images" />
-              </div>
-              <div class="name">
-                <h3>Name 3</h3>
-                <small>3 Mutual Friends</small>
-              </div>
-              <div class="button">
-                <a href=""> Add Friend </a>
-              </div>
-            </div>
-
-            <div class="head">
-              <div class="profile_photo">
-                <img src="images/profile4.png" alt="" class="images" />
-              </div>
-              <div class="name">
-                <h3>Name 3</h3>
-                <small>3 Mutual Friends</small>
-              </div>
-              <div class="button">
-                <a href=""> Add Friend </a>
-              </div>
-            </div>
-
-            <div class="head">
-              <div class="profile_photo">
-                <img src="images/profile4.png" alt="" class="images" />
-              </div>
-              <div class="name">
-                <h3>Name 3</h3>
-                <small>3 Mutual Friends</small>
-              </div>
-              <div class="button">
-                <a href=""> Add Friend </a>
-              </div>
-            </div>
-
-            <div class="head">
-              <div class="profile_photo">
-                <img src="images/profile4.png" alt="" class="images" />
-              </div>
-              <div class="name">
-                <h3>Name 3</h3>
-                <small>3 Mutual Friends</small>
-              </div>
-              <div class="button">
-                <a href=""> Add Friend </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="container2">
-            <div class="header">
-              <h3>Requests</h3>
-            </div>
-
-            <div class="head">
-              <div class="profile_photo">
-                <img src="images/profile4.png" alt="" class="images" />
-              </div>
-              <div class="name">
-                <h3>Name 3</h3>
-                <small>3 Mutual Friends</small>
-              </div>
-              <div class="button">
-                <a href=""> Confirm </a>
-              </div>
-              <div class="button1">
-                <a href=""> Decline </a>
-              </div>
-            </div>
-
-            <div class="head">
-              <div class="profile_photo">
-                <img src="images/profile4.png" alt="" class="images" />
-              </div>
-              <div class="name">
-                <h3>Name 3</h3>
-                <small>3 Mutual Friends</small>
-              </div>
-              <div class="button">
-                <a href=""> Confirm </a>
-              </div>
-              <div class="button1">
-                <a href=""> Decline </a>
-              </div>
-            </div>
-
-            <div class="head">
-              <div class="profile_photo">
-                <img src="images/profile4.png" alt="" class="images" />
-              </div>
-              <div class="name">
-                <h3>Name 3</h3>
-                <small>3 Mutual Friends</small>
-              </div>
-              <div class="button">
-                <a href=""> Confirm </a>
-              </div>
-              <div class="button1">
-                <a href=""> Decline </a>
-              </div>
-            </div>
-
-            <div class="head">
-              <div class="profile_photo">
-                <img src="images/profile4.png" alt="" class="images" />
-              </div>
-              <div class="name">
-                <h3>Name 3</h3>
-                <small>3 Mutual Friends</small>
-              </div>
-              <div class="button">
-                <a href=""> Confirm </a>
-              </div>
-              <div class="button1">
-                <a href=""> Decline </a>
-              </div>
-            </div>
-
-            <div class="head">
-              <div class="profile_photo">
-                <img src="images/profile4.png" alt="" class="images" />
-              </div>
-              <div class="name">
-                <h3>Name 3</h3>
-                <small>3 Mutual Friends</small>
-              </div>
-              <div class="button">
-                <a href=""> Confirm </a>
-              </div>
-              <div class="button1">
-                <a href=""> Decline </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </main>
-  </body>
+</body>
+
 </html>

@@ -46,10 +46,10 @@ nav .container{
 
 #name2{
     font-size: 30px;
-   margin-top: -44px;
-   margin-left: 45px;
-   align-items: center;
-   font-family: 'Ms Madi', cursive;
+    margin-top: -50px;
+    margin-left: 45px;
+    align-items: center;
+    font-family: 'Ms Madi', cursive;
 }
 
 
@@ -57,9 +57,9 @@ nav .search_bar{
     background: rgb(216, 202, 202);
     border-radius:10px ;
     width: 450px;
-    margin-left: 250px;
+    margin-left: 200px;
     align-items: center;
-    margin-top: 7px;
+    margin-top: 2px;
 
 }
 
@@ -84,6 +84,27 @@ nav .container .right_navbar{
     width: 250px;   
 }
 
+nav .container .mid{
+    display: flex;
+    position: relative;
+    margin-left: 80px;
+    margin-top: 5px;
+}
+
+button{
+    height: 40px;
+    width: 100px;
+    background-color: aqua;
+    font: 30px;
+    border: 3px solid blue;
+    border-radius: 10px;
+}
+
+nav .container .mid button :hover{
+    background-color: white;
+    color: black;
+}
+
 
 nav .container .right_navbar li{
     list-style: none;
@@ -104,17 +125,17 @@ nav .container .right_navbar li a{
 }
 
 
-nav .container .right_navbar li .active{
-    color: rgb(195, 120,8);
-    border-bottom: 5px solid  rgb(195, 120,8);
+nav .container .right_navbar li .active {
+    color : rgb(17,0,255);
+    border-bottom: 5px solid  rgb(17,0,255);
     width: 100%;
     border-radius: 5px;
     transition: 0.5 ease;
 }
 
-nav .container .right_navbar li :hover{
-    color:  rgb(195, 120, 8);
-    opacity: 0.8;
+nav .container .right_navbar li :hover {
+    color:  white;
+    opacity: 1;
 
 }
 

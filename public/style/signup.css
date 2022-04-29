@@ -9,7 +9,7 @@ body,html{
 
 .container{
     width: 400px;
-    height: 670px;
+    height: 700px;
     background: rgb(33, 33, 58);
     color: black;
     position: absolute;
@@ -75,6 +75,24 @@ input[type=text],input[type=password],input[type="email"],input[type="phone"]{
 }
 
 #signup:hover{
+    background:  red;;
+    color: white;
+    border-color: whitesmoke;
+}
+
+#upload{
+    border-width: 2px;
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: large;
+    background-color: #75a6ec;
+    background: #50A3C7;
+    border-color: white;
+}
+
+#upload:hover{
     background:  red;;
     color: white;
     border-color: whitesmoke;

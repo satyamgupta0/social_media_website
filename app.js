@@ -25,6 +25,25 @@ app.use(require("./scripts/profile"));
 app.use(require("./scripts/chat"));
 app.use(require("./scripts/home"));
 app.use(require("./scripts/test"));
+app.use(require("./scripts/like"));
+
+
+
+
+
+app.use(require("./scripts/test"));
+// app.get("/test", (req, res) => {
+//   res.write("Hello From the test.js <br>");
+//   // res.write(JSON.stringify(req.cookies.user));
+//   let person = req.cookies.user;
+//   res.write(JSON.stringify(person));
+//   res.write(person.user);
+//   res.send();
+// });
+
+
+
+
 // app.use(session({
 //     secret: 'keyboardcat',
 //     resave: false,
@@ -61,14 +80,29 @@ app.get("/error", (req, res) => {
   indexPath = path.join(__dirname, "views/error.html");
   res.sendFile(indexPath);
 });
+app.get("/friendlist", (req, res) => {
+  indexPath = path.join(__dirname, "views/friendlist.html");
+  res.sendFile(indexPath);
+});
+app.get("/suggestions", (req, res) => {
+  indexPath = path.join(__dirname, "views/suggestion.html");
+  res.sendFile(indexPath);
+});
+app.get("/request", (req, res) => {
+  indexPath = path.join(__dirname, "views/request.html");
+  res.sendFile(indexPath);
+});
 
 // route for user logout
 app.get("/logout", (req, res) => {
   //   if (req.session.user && req.cookies.user_sid) {
   //     res.clearCookie("user");
+  res.clearCookie("user");
+  console.log("Cookie cleared");
   res.redirect("/");
   //   }
 });
+
 
 // route for handling 404 requests(unavailable routes)
 app.use(function (req, res, next) {
