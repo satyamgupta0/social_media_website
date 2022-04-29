@@ -36,7 +36,7 @@ router.post("/reg", (req, res) => {
     ' values("'+username+'","'+fname+'","'+lname+'", "'+gender+'","'+email+'", "'+pswd+'","'+dob.toISOString().split('T')[0]+'", '+age+')';
 
   var sql2 =
-    'insert into mobilenumbers(userID, mobilenumber1 ,mobilenumber2)'+
+    'insert into mobileNumbers(userID, mobilenumber1 ,mobilenumber2)'+
     ' values("'+username+'","'+mob1+'","'+mob2+'")';
 
   con.query(sql2, (err, temp) => {

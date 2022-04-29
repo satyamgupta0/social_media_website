@@ -12,12 +12,12 @@ router.get("/home", (req, res) => {
     "select distinct userID as friends from friendships where friendId in ( select friendID from friendships where userID='"+person.userID+"');";
 
   let query2 = 
-    "SELECT * FROM posts NATURAL JOIN reaction WHERE uploaderID IN ( select friendId from friendships where userID = " + person.userID + ")";
+  'SELECT * FROM posts NATURAL JOIN reaction WHERE uploaderID IN ( select friendId from friendships where userID = "'+person.userID+'")';
 
     let f='';
   con.query(query1, (err, results, field) => {
     if (err) throw err;
-    if (results && results.length > 0) {
+    if (results && results.length >= 0) {
       //    list.
       // console.log(results);
       f=results;
