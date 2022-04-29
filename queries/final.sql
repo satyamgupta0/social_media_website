@@ -4,6 +4,10 @@ select friendID as friends from friendships where userID='12489'
 union
 select userID as friends from friendships where friendId='12489'
 
+-- make image in generalUser
+alter table generaluser add column image varchar(500) default 'images/man.png';
+
+
 -- Find all the mutual Friends of a user
 select distinct userID as friends
 from friendships
@@ -47,4 +51,4 @@ where UserId in
 );
 
 -- To make a friend request
-insert into friendships(userID, friendID,frndStatus,sessionid) values 
+insert into friendships(userID, friendID,frndStatus,sessionid) values('12489', '')
