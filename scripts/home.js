@@ -33,6 +33,8 @@ router.get("/home", (req, res) => {
 });
 
 router.get('/suggestions',(req,res)=>{
+  let person = req.cookies.user;
+    
   
 })
 

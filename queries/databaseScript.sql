@@ -10,6 +10,7 @@ email varchar(100) not null,
 pswd varchar(100), 
 dateOfBirth date,
 age int,
+image varchar(500) default 'images/man.png',
 primary key (userID)
 );
 
@@ -90,7 +91,7 @@ foreign key (uploaderID) references generalUser(userID) ON DELETE CASCADE
 -- another solution is to create multiple tables 
 -- but is chatit viable to make multiple tables?
 -- obviously there will be a loads of chatsessions
-sessionid varchar(300) not null,
+#sessionid varchar(300) not null,
  chatId varchar(500),
  message varchar(200),
  fromuser varchar(300),
@@ -104,6 +105,6 @@ sessionid varchar(300) not null,
  
  create table reaction(
       postid varchar(300) not null,
-      likes int,
+      likes int default 0,
       foreign key (postid) references posts(postid)
  )
