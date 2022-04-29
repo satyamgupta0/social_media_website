@@ -93,11 +93,23 @@ app.get("/request", (req, res) => {
   res.sendFile(indexPath);
 });
 
+// app.post("/tofriend",(req,res)=>{
+//   res.send("Hello ");
+//   // let friendID=req.body.friendID;
+//   // console.log(friendID);
+//   // res.cookie('activeFriend',friendID);
+//   // res.redirect('/chat');
+// });
+
 // route for user logout
 app.get("/logout", (req, res) => {
   //   if (req.session.user && req.cookies.user_sid) {
   //     res.clearCookie("user");
   res.clearCookie("user");
+  res.clearCookie("activeFriend");
+  res.clearCookie("friendID");
+  res.clearCookie("friendlist");
+  res.clearCookie("friend");  
   console.log("Cookie cleared");
   res.redirect("/");
   //   }

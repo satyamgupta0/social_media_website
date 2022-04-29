@@ -51,16 +51,20 @@
                     </div>
                 </div>
                 <div class="friendlist">
-                    <% chatlist.forEach((item)=>{%>
-                    <button class="head">
+                    <% friendlist.forEach((item)=>{%>
+<form action="/tofriend" method="post">
+                    <button class="head" value="<%= item.userid %>" type="submit" name="friendID"> 
                         <div>
                            <img src="images/man.png" alt="" class="images">&nbsp;
                         </div>
                         <div>
-                           <h3 style="padding: 5px; margin-top: 3px;"><%=item.fromuser%> TO <%=item.toUser%></h3>
-                        &nbsp;   <span style="margin-left: 3px;"><%=item.message%></span>
+                           <h3 style="padding: 5px; margin-top: 3px; cursor:pointer;  ">
+                            <%= item.fullname %>                            
+                        </h3>
+                        <!-- &nbsp;   <span style="margin-left: 3px;"><%=item.message%></span> -->
                         </div>
                     </button>
+                </form>
                     <%});%>
                    
                     
@@ -70,10 +74,10 @@
                  <div class="userheader">
                     <div class="Upperblock">
                         <div>
-                            <img src="images/man.png" alt="" class="images" style="margin-left: 5px; height: 50px; width: 50px;">
+                            <img src="<%= friend.image %> " alt="" class="images" style="margin-left: 5px; height: 50px; width: 50px;">
                         </div>
                         <div id="userinfo">
-                            <h3>Mayank Mangal Mourya</h3>       <!--touser-->
+                            <h3><%= friend.fullname %> </h3>       <!--touser-->
                             <span style="color: white; margin-top: -30px;">Status : active</span>
                         </div>
                     </div>

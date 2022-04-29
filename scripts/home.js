@@ -24,6 +24,23 @@ router.get("/home", (req, res) => {
     }    
   });
 
+  // create a cookie named friendlist to feed chat-page
+  let query3='select * from friendlist where userID in ('+
+      'select friendid from friendships as friends where userid="'+person.userID+'"'+
+      'union '+
+      'select userid from friendships as friends where  friendID = "'+person.userID+'")';
+      
+    con.query(query3, function (err, result, fields) {
+      if (err) throw err;
+
+      if (result && result.length >= 0)
+      res.cookie("friend", result[0]), 
+      res.cookie("friendlist",result),//store the list of friends in the cookies      
+      res.cookie("activeFriend", result[0].userid);//storing the activeFriend cookie to show the messages for the first time in
+      // the chat page
+      // console.log(result);
+    });
+
   con.query(query2, (err, result, field) => {
     if (err) throw err;
     if (result && result.length >= 0) {
