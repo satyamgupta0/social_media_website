@@ -92,6 +92,7 @@ foreign key (uploaderID) references generalUser(userID) ON DELETE CASCADE
 -- but is chatit viable to make multiple tables?
 -- obviously there will be a loads of chatsessions
 #sessionid varchar(300) not null,
+
  chatId varchar(500) INT AUTO_INCREMENT,
  message varchar(200),
  fromuser varchar(300),
