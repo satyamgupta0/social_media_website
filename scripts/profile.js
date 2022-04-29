@@ -37,7 +37,7 @@ router.get("/profile", (req, res) => {
     con.query(query3, function (err, result, fields) {
         if (err) throw err;
         if (result && result.length >= 0) 
-        // console.log(result);
+
         res.render('profile',{data:result,posts:Posts,friends:Friends,Username:id,Name:name})
       });
 
