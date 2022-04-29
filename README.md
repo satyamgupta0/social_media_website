@@ -17,5 +17,5 @@ required softwares; MySQL Workbench, Node.JS
 ## now the project is running open your browser and head-over to http://localhost:8000/
 # Enjoy the project.
 
-please contact us at 202051169@iiitvadodara.ac.in if you have any suggestions or if you having any problems in setting up the project.
+Please feel free to reachout to us at 202051169@iiitvadodara.ac.in if you have any suggestions or if you having any problems in setting up the project.
 ## Thank you
