@@ -29,34 +29,11 @@ router.get("/home", (req, res) => {
     if (result && result.length >= 0) {
       res.render("home",{Posts:result});
     }    
-  });
-
-  // let person= login.person;
-    // indexPath = "/home/satyam/social/social_media_website/views/home.html";
-    // console.log(indexPath);
-    // console.log(person);
-    // res.render("home");
+  });  
 });
 
-// router.post('/home',(req,res)=>{
-// let person= user.person;
-// console.log(person);
-
-// //Mutual Friends here
-// let list={};
-// let sql = "select distinct userID as friends from friendships where friendId in ( select friendID from friendships where userID='user11');"
-// con.query(sql,(err,results,field)=>{
-//    if(err) throw err;
-//    if(results && results.length>0){
-//     //    list.
-// console.log(results);
-//    }
-
-// })
-//     // res.render("home",{
-//     //     person:user,//here
-
-//     // })
-// })
+router.get('/suggestions',(req,res)=>{
+  
+})
 
 module.exports = router;

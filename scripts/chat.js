@@ -24,4 +24,13 @@ router.get("/chat", (req, res) => {
 
   });
 
+  router.post("/message",(req,res)=>{
+    var message=req.body.baat;
+    console.log(message);
+    
+
+    res.redirect('/chat');
+
+  })
+
   module.exports = router;
