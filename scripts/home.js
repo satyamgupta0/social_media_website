@@ -27,7 +27,11 @@ router.get("/home", (req, res) => {
 
 // posts query
   let query2 = 
-  'SELECT * FROM posts NATURAL JOIN reaction WHERE uploaderID IN ( select friendId from friendships where userID = "'+person.userID+'")';
+  'with posts as '+
+  '(SELECT * FROM posts NATURAL JOIN reaction WHERE uploaderID IN ( select friendId from friendships where userID = "'+person.userID+'")),'+
+  ' details as '+ 
+  '(select userid,fullname,gender,email,image as profileimage from friendlist)'+
+  ' select * from posts inner join details on posts.uploaderID=details.userid ';
     //execute the posts query and render the page
   con.query(query2, (err, result, field) => {
     if (err) throw err;
