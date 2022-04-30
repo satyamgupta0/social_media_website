@@ -20,6 +20,13 @@ union
 select userid from friendships as friends where  friendID = '12489'
 );
 
+-- list all the posts with details of the uploader
+with posts as 
+(SELECT * FROM posts NATURAL JOIN reaction WHERE uploaderID IN ( select friendId from friendships where userID = '12489')),
+details as 
+(select userid,fullname,gender,email,image as profileimage from friendlist)
+select * from posts inner join details on posts.uploaderID=details.userid;
+
 -- modify the table to add auto increment constrints on chat table chatid
 alter table chat modify column chatID INT AUTO_INCREMENT ;
 
