@@ -28,7 +28,8 @@ router.get("/chat", (req, res) => {
     if (result && result.length >= 0) {
       // console.log(result);
       let friendlist = req.cookies.friendlist;
-      let friend=req.cookies.friend;
+      let friend=req.cookies.friend;//details of friend from the homepage-default 
+      // and from the side friend-list using action (/tofriend) {find in the last of this page}
       res.render("chat", {
         chatlist: result,
         Username: id,
