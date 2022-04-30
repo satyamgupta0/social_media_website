@@ -80,10 +80,7 @@ app.get("/error", (req, res) => {
   indexPath = path.join(__dirname, "views/error.html");
   res.sendFile(indexPath);
 });
-app.get("/friendlist", (req, res) => {
-  indexPath = path.join(__dirname, "views/friendlist.html");
-  res.sendFile(indexPath);
-});
+
 app.get("/suggestions", (req, res) => {
   indexPath = path.join(__dirname, "views/suggestion.html");
   res.sendFile(indexPath);
