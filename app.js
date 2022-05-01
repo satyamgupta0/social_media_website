@@ -5,7 +5,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-
+var moment = require('moment');
+app.locals.moment = require('moment');
 // initialize cookie-parser to allow us access the cookies stored in the browser.
 app.use(cookieParser());
 
@@ -80,10 +81,7 @@ app.get("/error", (req, res) => {
   indexPath = path.join(__dirname, "views/error.html");
   res.sendFile(indexPath);
 });
-app.get("/friendlist", (req, res) => {
-  indexPath = path.join(__dirname, "views/friendlist.html");
-  res.sendFile(indexPath);
-});
+
 app.get("/suggestions", (req, res) => {
   indexPath = path.join(__dirname, "views/suggestion.html");
   res.sendFile(indexPath);
@@ -93,11 +91,23 @@ app.get("/request", (req, res) => {
   res.sendFile(indexPath);
 });
 
+// app.post("/tofriend",(req,res)=>{
+//   res.send("Hello ");
+//   // let friendID=req.body.friendID;
+//   // console.log(friendID);
+//   // res.cookie('activeFriend',friendID);
+//   // res.redirect('/chat');
+// });
+
 // route for user logout
 app.get("/logout", (req, res) => {
   //   if (req.session.user && req.cookies.user_sid) {
   //     res.clearCookie("user");
   res.clearCookie("user");
+  res.clearCookie("activeFriend");
+  res.clearCookie("friendID");
+  res.clearCookie("friendlist");
+  res.clearCookie("friend");  
   console.log("Cookie cleared");
   res.redirect("/");
   //   }

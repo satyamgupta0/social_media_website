@@ -72,15 +72,14 @@
                   <img src="images/man.png" alt="" class="images" />
                 </div>
                 <div class="name">
-                  <h3><%=item.fname%> <%=item.lname%></h3>
-                  <small>10 Min ago</small>
+                  <h3><%=item.fullname%></h3>
+                  <small><%= moment(item.tmstp).fromNow() %> </small>
                 </div>
               </div>
-
               <div class="photo">
                 <img src="<%=item.image%>" alt="" class="post_photo" />
               </div>
-
+              <p style="font-size: 2em;"><%=item.caption%></p> 
               <div class="action-button">
                 <div class="like_comment">
                   <span><i class="uil uil-heart"></i></span>
@@ -91,7 +90,6 @@
                   <span><i class="uil uil-bookmark-full"></i></span>
                 </div>
               </div>
-
               <div class="liked-by">
                 <span
                   ><img src="images/profile2.png" alt="" class="image"
@@ -102,15 +100,13 @@
                 <span
                   ><img src="images/profile4.png" alt="" class="image"
                 /></span>
-                <p>Likes : <b><%=item.likes%></b></p>
+                &nbsp;&nbsp;
+                <p>Liked by <b><%=item.likes%> Friends</b></p>            
               </div>
-
-              <div class="caption">
-                <p>
-                  <b><%=item.uploaderID%> : </b><%=item.caption%>
-                </p>
+              <div class="caption">         
+                  
+                                  
               </div>
-
               <div class="comments text-muted">view all 23 comments</div>
             </div>
             <%});%>
