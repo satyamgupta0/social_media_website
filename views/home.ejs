@@ -33,7 +33,7 @@
               <a href="/request" >Request</a>
           </button>&nbsp&nbsp
           <button>
-              <a href="/suggestions" id="butn">Suggestions</a>
+              <a href="/suggestion" id="butn">Suggestions</a>
           </button>
       </div>
         <div class="right_navbar">
@@ -76,7 +76,6 @@
                   <small><%= moment(item.tmstp).fromNow() %> </small>
                 </div>
               </div>
-
               <div class="photo">
                 <img src="<%=item.image%>" alt="" class="post_photo" />
               </div>
@@ -91,7 +90,6 @@
                   <span><i class="uil uil-bookmark-full"></i></span>
                 </div>
               </div>
-
               <div class="liked-by">
                 <span
                   ><img src="images/profile2.png" alt="" class="image"
@@ -105,12 +103,10 @@
                 &nbsp;&nbsp;
                 <p>Liked by <b><%=item.likes%> Friends</b></p>            
               </div>
-
               <div class="caption">         
                   
                                   
               </div>
-
               <div class="comments text-muted">view all 23 comments</div>
             </div>
             <%});%>
