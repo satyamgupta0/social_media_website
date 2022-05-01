@@ -27,9 +27,7 @@ app.use(require("./scripts/chat"));
 app.use(require("./scripts/home"));
 app.use(require("./scripts/test"));
 app.use(require("./scripts/like"));
-
-
-
+app.use(require("./scripts/suggestion"));
 
 
 app.use(require("./scripts/test"));
@@ -82,10 +80,6 @@ app.get("/error", (req, res) => {
   res.sendFile(indexPath);
 });
 
-app.get("/suggestions", (req, res) => {
-  indexPath = path.join(__dirname, "views/suggestion.html");
-  res.sendFile(indexPath);
-});
 app.get("/request", (req, res) => {
   indexPath = path.join(__dirname, "views/request.html");
   res.sendFile(indexPath);

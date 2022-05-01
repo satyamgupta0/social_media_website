@@ -50,14 +50,24 @@ set likes = 200000
 where postid = "P2";
 
 -- To get friend of friends
-SELECT friendId AS Friends
-FROM friendships
-WHERE userID IN
+SELECT DISTINCT F.friendId AS Friends, G.fname, G.lname
+FROM friendships F
+INNER JOIN generaluser G
+ON F.friendID = G.userID
+WHERE F.userID IN
 (
 	SELECT friendId
     FROM friendships
     WHERE userID = 12489
-);
+)
+and F.friendID NOT IN
+(
+	SELECT friendId
+    FROM friendships
+    WHERE userID = 12489
+)
+and F.friendID <> 12489;
+
 
 -- Satyam Version
 select distinct userID as friends
