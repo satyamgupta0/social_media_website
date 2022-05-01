@@ -5,7 +5,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-
+var moment = require('moment');
+app.locals.moment = require('moment');
 // initialize cookie-parser to allow us access the cookies stored in the browser.
 app.use(cookieParser());
 

@@ -1,7 +1,8 @@
 create database social;
+
 use social;
 -- Descibes each and every user on the plate
-create table generalUser(
+create table generaluser(
 userID varchar(300) not null,
 fname varchar(100),
 lname varchar(100),
@@ -17,7 +18,7 @@ primary key (userID)
 #insert into generalUser(userID, fname, mname, lname, gender, email, pswd, numbersID) 
 #values(12312,"Satyam", "Kumar","Gupta", "male","202051169@iiitv.ac.in", "won't tell", 23212  );
 # describes the list of multiple mobile numbers related to each user
-create table mobileNumbers(
+create table mobilenumbers(
 -- we are limiting the number of numbers
 -- alternate solution would be to make table
 -- with userId and mobile number but somehow
@@ -34,15 +35,15 @@ create table friendships( -- Describes a relationship bw user and friend
  -- MySQL limits us to create personalized friendship tables
  -- We have to make a common friendship table describing the chatsession
  -- relationship and status
- --small number in user and larger one in friends 
+ -- small number in user and larger one in friends 
  userID varchar(300) ,
  friendId varchar(300),
  frndstatus varchar(50),-- blocked, active
  #sessionid varchar(300) not null,-- reference to chat session
  primary key (userID,friendID),
  #foreign key (sessionid) references chat(sessionid), #Session ID will be same for multiple chatsin a sesion
- foreign key (friendID) references generalUser(userID) ON DELETE CASCADE ,
- foreign key (userID) references generalUser(userID) ON DELETE CASCADE 
+ foreign key (friendID) references generaluser(userID) ON DELETE CASCADE ,
+ foreign key (userID) references generaluser(userID) ON DELETE CASCADE 
  ); 
  create table posts(
  -- user either share posts, or save posts
@@ -65,7 +66,7 @@ create table friendships( -- Describes a relationship bw user and friend
  # commentuserID int not null,
 tmstp datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
 primary key (postid),
-foreign key (uploaderID) references generalUser(userID) ON DELETE CASCADE 
+foreign key (uploaderID) references generaluser(userID) ON DELETE CASCADE 
 );
  
   create table upload(
@@ -78,7 +79,7 @@ foreign key (uploaderID) references generalUser(userID) ON DELETE CASCADE
  postID varchar(300) not null,
  flag varchar(50),# flag to identify whether the post is posted by the user or saved, or shared
  primary key (userID,postID),
- foreign key (userID) references generalUser(userID) ON DELETE CASCADE ,
+ foreign key (userID) references generaluser(userID) ON DELETE CASCADE ,
  foreign key (postID) references posts(postid) ON DELETE CASCADE 
  );
  ################### problematic ###########################
@@ -93,14 +94,14 @@ foreign key (uploaderID) references generalUser(userID) ON DELETE CASCADE
 -- obviously there will be a loads of chatsessions
 #sessionid varchar(300) not null,
 
- chatId varchar(500) INT AUTO_INCREMENT,
+ chatId INT AUTO_INCREMENT,
  message varchar(200),
  fromuser varchar(300),
  toUser varchar(300),
  tmstp datetime NOT NULL DEFAULT CURRENT_TIMESTAMP, 
  primary key (chatID),
- foreign key (fromuser) references generalUser(userID) ON DELETE CASCADE, 
- foreign key (touser) references generalUser(userID) ON DELETE CASCADE 
+ foreign key (fromuser) references generaluser(userID) ON DELETE CASCADE, 
+ foreign key (touser) references generaluser(userID) ON DELETE CASCADE 
  );
  
  

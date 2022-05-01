@@ -110,13 +110,15 @@
                              </div>
                              <div class="name">
                                  <h3><%=Name%></h3>
-                                 <small>10 Min ago</small>
+                                 <small><%= moment(item.tmstp).fromNow() %> </small>
                              </div>
                         </div>
 
                         <div class="photo">
                              <img src="<%=item.image%>" alt="" class="post_photo">
                         </div>
+                        <p style="font-size: 2em"><%=item.caption%></p>
+
 
                         <div class="action-button">
                              <div class="like_comment">
@@ -132,14 +134,11 @@
                         <div class="liked-by">
                                  <span><img src="images/profile2.png" alt="" class="image"></span>
                                  <span><img src="images/profile3.png" alt="" class="image"></span>
-                                 <span><img src="images/profile4.png" alt="" class="image"></span>&nbsp; &nbsp;
-                                 <p>Likes : <b><%=item.likes%></b></p>
+                                 <span><img src="images/profile4.png" alt="" class="image"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 <p>Liked by <b><%=item.likes%></b> Friends</p>
                         </div>
 
-                        <div class="caption">
-                            <p><b><%=item.uploaderID%> : </b><%=item.caption%></p>
-                        </div> 
-
+                       
                         <div class="comments text-muted">
                                    view all 23 comments
                         </div>
