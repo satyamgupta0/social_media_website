@@ -1,6 +1,6 @@
 create database social;
 
-use socialdb;
+use social;
 -- Descibes each and every user on the plate
 create table generaluser(
 userID varchar(300) not null,
