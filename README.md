@@ -12,10 +12,10 @@ required softwares; MySQL Workbench, Node.JS
 4. npm i
 5. node app.js
 
-
+## head-over to scripts/dbcon.js and update your sql credentials.
 # use the files in /queries/data/ to populate your database
-## now the project is running open your browser and head-over to http://localhost:8000/
-# Enjoy the project.
+## You are all set to enjoy, open your browser and head-over to http://localhost:8000/
 
-Please feel free to reachout to us at 202051169@iiitvadodara.ac.in if you have any suggestions or if you having any problems in setting up the project.
+
+Please feel free to reachout at 202051169@iiitvadodara.ac.in, in case, if you have any suggestions or facing problems in setting up the project.
 ## Thank you
