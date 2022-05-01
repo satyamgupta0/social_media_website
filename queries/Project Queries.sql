@@ -32,9 +32,10 @@ FROM posts
 WHERE uploaderID = 12489;
 
 -- To get posts of friends
-SELECT *
-FROM posts NATURAL JOIN reaction
-WHERE uploaderID IN 
+SELECT P.*,R.*,G.fname,G.lname
+FROM (posts P NATURAL JOIN reaction R) Inner JOIN generaluser G 
+ON P.uploaderID = G.userID
+WHERE P.uploaderID IN 
 (
 	select friendId
     from friendships
@@ -57,6 +58,7 @@ WHERE userID IN
     FROM friendships
     WHERE userID = 12489
 );
+
 -- Satyam Version
 select distinct userID as friends
 from friendships

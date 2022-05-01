@@ -12,7 +12,8 @@ router.get("/home", (req, res) => {
     "select distinct userID as friends from friendships where friendId in ( select friendID from friendships where userID='"+person.userID+"');";
 
   let query2 = 
-  'SELECT * FROM posts NATURAL JOIN reaction WHERE uploaderID IN ( select friendId from friendships where userID = "'+person.userID+'")';
+  'SELECT P.*,R.*,G.fname,G.lname FROM (posts P NATURAL JOIN reaction R) Inner JOIN generaluser G ON P.uploaderID = G.userID WHERE P.uploaderID IN'
+    + '(select friendId from friendships where userID = + '+ person.userID + ' )';
 
     let f='';
   con.query(query1, (err, results, field) => {
@@ -33,7 +34,8 @@ router.get("/home", (req, res) => {
 });
 
 router.get('/suggestions',(req,res)=>{
-  
+  indexPath = path.join(__dirname, "../views/suggestion.html");
+  res.sendFile(indexPath);
 })
 
 module.exports = router;
