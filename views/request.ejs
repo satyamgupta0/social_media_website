@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friendlist</title>
+    <title>Requests</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com" />
@@ -30,15 +30,15 @@
                 <input type="search" placeholder="Search For a Friend" />
             </div>
             <div class="mid">
-                <button id="butn">
-                    <a href="/request">Request</a>
+                <button id="Active">
+                    <a href="/request" >Request</a>
                 </button>&nbsp&nbsp
-                <button id="butn">
-                    <a href="/suggestions" >Suggestions</a>
+                <button>
+                    <a href="/suggestions" id="butn">Suggestions</a>
                 </button>
             </div>
             <div class="right_navbar">
-
+                
                 <li>
                     <a href="/home" class="btn"><i class="uil uil-home"></i></a>
                 </li>
@@ -61,31 +61,29 @@
     <main>
         <div class="container2">
             <div class="header">
-                <h3>Your Friends</h3>
-                
+                <h3>Requests</h3>
             </div>
-<% friendlist.forEach((item)=>{ %>
-    <div class="head">
-        <div class="profile_photo">
-            <img src="<%= item.image %> " alt="" class="images" />
-        </div>
-        <div class="name">
-            <h3><%= item.fullname %> </h3>
-            <small><%= item.userid %> </small>
-        </div>
 
-        <form action="/friendprofile" method="post">
-            <input type="hidden" name="friendName" value="<%= item.fullname %>">
-            <input type="hidden" name="friendID" value="<%= item.userid %>">
-            <button type="submit" style="cursor: pointer;"> Visit Profile</button>
-        </form>
-        <!-- <div class="button">
-            <a href=""> Visit Profile </a>
-        </div> -->
-    </div>
+            <% pendingFriends.forEach((item)=>{ %> 
+            <div class="head">
+                <div class="profile_photo">
+                    <img src="<%= item.image %> " alt="" class="images" />
+                </div>
+                <div class="name">
+                    <h3><%= item.fullname %> </h3>
+                    <!-- <small>3 Mutual Friends</small> -->
+                </div>
+                <div class="button">
+                    <a href=""> Confirm </a>
+                </div>
+                <div class="button1">
+                    <a href=""> Decline </a>
+                </div>
+            </div>
+            <%});%>
+            
 
-<%}); %>          
-
+            
         </div>
     </main>
 </body>

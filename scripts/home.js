@@ -10,9 +10,9 @@ router.get("/home", (req, res) => {
 
   // create a cookie named friendlist to feed chat-page
   let query3='select * from friendlist where userID in ('+
-      'select friendid from friendships as friends where userid="'+person.userID+'"'+
+      'select friendid from friendships as friends where userid="'+person.userID+'" and frndstatus="active" '+
       'union '+
-      'select userid from friendships as friends where  friendID = "'+person.userID+'")';
+      'select userid from friendships as friends where  friendID = "'+person.userID+'" and frndstatus="active")';
       
     con.query(query3, function (err, result, fields) {
       if (err) throw err;
@@ -41,15 +41,6 @@ router.get("/home", (req, res) => {
   });  
 });
 
-router.get('/suggestions',(req,res)=>{
-  let person = req.cookies.user;
 
-
-
-  res.redirect("/home");
-    
-  
-  
-})
 
 module.exports = router;
